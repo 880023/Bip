@@ -411,7 +411,7 @@ a {
   z-index: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   background-image: url(../img/bgc.png);
   background-size: 1920px 1080px;
   background-repeat: no-repeat;
@@ -419,10 +419,10 @@ a {
   margin: 0px 0px calc(var(--px-93-1920) * -1) 0px;
 }
 .home-page__container .home-page__content {
-  width: 1200px;
+  width: calc(var(--px-400-1920) * 3);
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   flex-wrap: wrap;
 }
 .home-page__container .home-page__content .wpapp-title {
@@ -430,6 +430,8 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  top: calc(50vh - var(--px-100-1920));
 }
 .home-page__container .home-page__content .wpapp-title h1 {
   color: #FFF;
@@ -583,6 +585,85 @@ a {
   font-style: normal;
   font-weight: 700;
   line-height: 130%;
+}
+
+.bestsellers__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bestsellers__container .bestsellers__content {
+  width: calc(var(--px-400-1920) * 3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0px 0px var(--px-100-1920) 0px;
+}
+.bestsellers__container .bestsellers__content .wrapp__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: var(--px-100-1920) 0px 0px 0px;
+}
+.bestsellers__container .bestsellers__content .wrapp__title h3 {
+  color: #FFF;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: var(--px-72-1920);
+  font-style: italic;
+  font-weight: 700;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+.bestsellers__container .bestsellers__content .wrapp__cards {
+  width: calc(var(--px-400-1920) * 3);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: var(--px-70-1920) 0px 0px 0px;
+}
+.bestsellers__container .bestsellers__content .wrapp__cards .wrapp__card {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+  width: var(--px-350-1920);
+  height: calc(var(--px-400-1920) * 1.125);
+  background-color: #FFF;
+  background-color: #111111;
+}
+.bestsellers__container .bestsellers__content .wrapp__cards .wrapp__card img {
+  width: var(--px-350-1920);
+  height: calc(var(--px-400-1920) * 1.125);
+  background-color: pink;
+}
+.bestsellers__container .bestsellers__content .wrapp__cards .wrapp__card .wrapp__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: var(--px-20-1920) 0px 0px 0px;
+}
+.bestsellers__container .bestsellers__content .wrapp__cards .wrapp__card .wrapp__text .product-name {
+  width: 100%;
+  color: #FFF;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: var(--px-30-1920);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+.bestsellers__container .bestsellers__content .wrapp__cards .wrapp__card .wrapp__text .product-price {
+  width: 100%;
+  color: #FFF;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: var(--px-24-1920);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
 }
 
 .popular-goods__container {

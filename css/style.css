@@ -164,7 +164,8 @@ a {
   height: var(--px-26-1920);
   background-color: transparent;
   border: none;
-  margin: 0px var(--px-50-1920) 0px 0px;
+  margin: 0px var(--px-110-1920) 0px 0px;
+  cursor: pointer;
 }
 .header__container .header-content .instagram .inst-size {
   width: var(--px-24-1920);
@@ -187,6 +188,7 @@ a {
   font-style: normal;
   font-weight: 600;
   line-height: 130%;
+  cursor: pointer;
 }
 .header__container .header-content .menu .menu-list .menu-link:hover {
   color: #CDAA7D;
@@ -223,6 +225,7 @@ a {
   background: transparent;
   margin: 0px 0px 0px var(--px-104-1920);
   border: none;
+  cursor: pointer;
   transition: opacity 0.25s;
 }
 .header__container .header-content .about-us__button .about-us__size {
@@ -236,6 +239,7 @@ a {
   border: none;
   z-index: -2;
   opacity: 0;
+  cursor: pointer;
   animation: visible-elem 0.25s normal linear forwards paused;
 }
 .header__container .header-content .about-us__close .close__size {
@@ -722,6 +726,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .popular-goods__container .popular-goods__content .wrapp__product .second-row .wrapp__paragraph {
   width: 90%;
@@ -737,7 +742,7 @@ a {
   width: 100%;
   text-align: start;
   font-family: "Garamond", serif;
-  font-size: var(--px-24-1920);
+  font-size: var(--px-28-1920);
   font-style: normal;
   font-weight: 700;
   line-height: 120%;
@@ -746,10 +751,33 @@ a {
   color: rgba(205, 170, 125, 0.8);
   text-align: start;
   font-family: "Cormorant Garamond", serif;
-  font-size: var(--px-18-1920);
+  font-size: var(--px-22-1920);
   font-style: normal;
   font-weight: 400;
-  line-height: 130%;
+  line-height: 100%;
+}
+.popular-goods__container .popular-goods__content .wrapp__product .second-row .wrapp__paragraph .wrapp__button {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.popular-goods__container .popular-goods__content .wrapp__product .second-row .wrapp__paragraph .wrapp__button .go__store {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--px-9-1920) var(--px-15-1920);
+  background: transparent;
+  border: var(--px-1-1920) solid #CDAA7D;
+}
+.popular-goods__container .popular-goods__content .wrapp__product .second-row .wrapp__paragraph .wrapp__button .go__store a {
+  color: rgba(205, 170, 125, 0.8);
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: var(--px-22-1920);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
 }
 .popular-goods__container .popular-goods__content .wrapp__product .second-row .background-line {
   position: absolute;
@@ -803,6 +831,30 @@ a {
   font-weight: 400;
   line-height: 130%;
 }
+.popular-goods__container .popular-goods__content .wrapp__product-right .first-row .wrapp__paragraph .wrapp__button {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin: var(--px-10-1920) 0px 0px 0px;
+}
+.popular-goods__container .popular-goods__content .wrapp__product-right .first-row .wrapp__paragraph .wrapp__button .go__store {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--px-9-1920) var(--px-15-1920);
+  background: transparent;
+  border: var(--px-1-1920) solid #CDAA7D;
+}
+.popular-goods__container .popular-goods__content .wrapp__product-right .first-row .wrapp__paragraph .wrapp__button .go__store a {
+  color: rgba(205, 170, 125, 0.8);
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: var(--px-22-1920);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+}
 .popular-goods__container .popular-goods__content .wrapp__product-right .first-row .background-line {
   position: absolute;
   top: calc(var(--px-350-1920) * 1.05);
@@ -820,6 +872,184 @@ a {
   position: relative;
 }
 .popular-goods__container .popular-goods__content .wrapp__product-right .second-row .photo {
+  width: var(--px-400-1920);
+  height: var(--px-400-1920);
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 3;
+}
+.popular-goods__container .popular-goods__content .wrapp__beauty-hair {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: var(--px-100-1920);
+}
+.popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp-title h3 {
+  color: #CDAA7D;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: var(--px-48-1920);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+  border-bottom: var(--px-2-1920) solid #CDAA7D;
+}
+.popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product {
+  height: calc(var(--px-400-1920) * 1.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  margin: var(--px-30-1920) 0px;
+  position: relative;
+}
+.popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product .first-row {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  position: relative;
+}
+.popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product .first-row .photo {
+  width: var(--px-400-1920);
+  height: var(--px-400-1920);
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 10;
+}
+.popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product .second-row {
+  width: 50%;
+  height: var(--px-400-1920);
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product .second-row .wrapp__paragraph {
+  width: 80%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--px-20-1920);
+  overflow: visible;
+}
+.popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product .second-row .wrapp__paragraph h2 {
+  color: rgba(205, 170, 125, 0.8);
+  width: 100%;
+  text-align: start;
+  font-family: "Garamond", serif;
+  font-size: var(--px-24-1920);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+.popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product .second-row .wrapp__paragraph p {
+  color: rgba(205, 170, 125, 0.8);
+  text-align: start;
+  font-family: "Cormorant Garamond", serif;
+  font-size: var(--px-18-1920);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+.popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product .second-row .background-line {
+  position: absolute;
+  top: calc(var(--px-400-1920) * 1.05);
+  right: var(--px-150-1920);
+  width: calc(var(--px-400-1920) * 2);
+  height: var(--px-1-1920);
+  background-color: #CDAA7D;
+}
+.popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right {
+  height: calc(var(--px-400-1920) * 1.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: var(--px-30-1920) 0px;
+}
+.popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .first-row {
+  width: 50%;
+  height: var(--px-400-1920);
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .first-row .wrapp__paragraph {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--px-20-1920);
+}
+.popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .first-row .wrapp__paragraph h2 {
+  color: rgba(205, 170, 125, 0.8);
+  width: 100%;
+  text-align: start;
+  font-family: "Garamond", serif;
+  font-size: var(--px-24-1920);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+.popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .first-row .wrapp__paragraph p {
+  color: rgba(205, 170, 125, 0.8);
+  text-align: start;
+  font-family: "Cormorant Garamond", serif;
+  font-size: var(--px-18-1920);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+.popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .first-row .wrapp__paragraph .wrapp__button {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .first-row .wrapp__paragraph .wrapp__button .go__store {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--px-9-1920) var(--px-15-1920);
+  background: transparent;
+  border: var(--px-1-1920) solid #CDAA7D;
+}
+.popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .first-row .wrapp__paragraph .wrapp__button .go__store a {
+  color: rgba(205, 170, 125, 0.8);
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: var(--px-22-1920);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+}
+.popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .first-row .background-line {
+  position: absolute;
+  top: calc(var(--px-350-1920) * 1.05);
+  left: var(--px-150-1920);
+  width: calc(var(--px-400-1920) * 2);
+  height: var(--px-1-1920);
+  background-color: #CDAA7D;
+}
+.popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .second-row {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  position: relative;
+}
+.popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .second-row .photo {
   width: var(--px-400-1920);
   height: var(--px-400-1920);
   background-color: rgba(255, 255, 255, 0.8);

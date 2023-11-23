@@ -1,0 +1,746 @@
+@import url("adaptive.css");
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+  margin: var();
+}
+
+body {
+  line-height: 1;
+  font-family: "Open Sans", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.wrapp-page {
+  background-color: #111111;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.header__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  position: relative;
+  z-index: 2;
+}
+.header__container .header-content {
+  font-family: "Cormorant Garamond", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: var(--px-30-1920) 0px 0px 0px;
+  border-bottom: var(--px-1-1920) solid rgba(255, 255, 255, 0.5);
+}
+.header__container .header-content .instagram {
+  width: var(--px-26-1920);
+  height: var(--px-26-1920);
+  background-color: transparent;
+  border: none;
+  margin: 0px var(--px-50-1920) 0px 0px;
+}
+.header__container .header-content .instagram .inst-size {
+  width: var(--px-24-1920);
+  height: var(--px-24-1920);
+}
+.header__container .header-content .menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header__container .header-content .menu .menu-list {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: var(--px-80-1920);
+}
+.header__container .header-content .menu .menu-list .menu-link {
+  position: relative;
+  color: #FFF;
+  font-size: var(--px-18-1920);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+}
+.header__container .header-content .menu .menu-list .menu-link:hover {
+  color: #CDAA7D;
+  font-size: var(--px-18-1920);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+}
+.header__container .header-content .menu .menu-list .menu-link:after {
+  content: "";
+  bottom: calc(var(--px-2-1920) * -1);
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: var(--px-1-1920);
+  background-color: #CDAA7D;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+.header__container .header-content .menu .menu-list .menu-link:hover::after {
+  width: 100%;
+  left: 0px;
+}
+.header__container .header-content .wrapp-logo {
+  margin: 0px var(--px-120-1920);
+}
+.header__container .header-content .wrapp-logo a .img-size {
+  width: var(--px-60-1920);
+  height: var(--px-60-1920);
+  border-radius: 40px;
+}
+.header__container .header-content .about-us__button {
+  background: transparent;
+  margin: 0px 0px 0px var(--px-104-1920);
+  border: none;
+  transition: opacity 0.25s;
+}
+.header__container .header-content .about-us__button .about-us__size {
+  width: var(--px-50-1920);
+  height: var(--px-20-1920);
+}
+.header__container .header-content .about-us__close {
+  position: absolute;
+  right: 0px;
+  background: transparent;
+  border: none;
+  z-index: -2;
+  opacity: 0;
+  animation: visible-elem 0.25s normal linear forwards paused;
+}
+.header__container .header-content .about-us__close .close__size {
+  width: var(--px-32-1920);
+  height: var(--px-32-1920);
+}
+@keyframes visible-close {
+  0% {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    position: absolute;
+    opacity: 1;
+    z-index: 1;
+  }
+}
+@keyframes hidden-close {
+  0% {
+    position: absolute;
+    opacity: 1;
+    z-index: 1;
+  }
+  100% {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+.header__container .header-content .about-us__inform {
+  width: calc(var(--px-400-1920) * 1.0875);
+  height: 101vh;
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  position: absolute;
+  right: calc(var(--px-360-1920) * -2.21);
+  top: calc(var(--px-30-1920) * -1);
+  background: #111;
+}
+.header__container .header-content .about-us__inform .wrapp__text {
+  width: var(--px-315-1920);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: calc(50% - var(--px-157-1920));
+  margin: var(--px-246-1920) 0px 0px 0px;
+}
+.header__container .header-content .about-us__inform .wrapp__text p {
+  color: #FFF;
+  font-family: "Cormorant Garamond", serif;
+  font-size: var(--px-18-1920);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+.header__container .header-content .about-us__inform .wrapp__contacts {
+  width: var(--px-315-1920);
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+  position: relative;
+  left: calc(50% - var(--px-157-1920));
+  margin: var(--px-80-1920) 0px 0px 0px;
+}
+.header__container .header-content .about-us__inform .wrapp__contacts h3 {
+  width: 100%;
+  color: #FFF;
+  text-align: start;
+  font-family: "Garamond", serif;
+  font-size: var(--px-24-1920);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  margin: 0px 0px var(--px-25-1920) 0px;
+}
+.header__container .header-content .about-us__inform .wrapp__contacts span {
+  width: 100%;
+  color: #FFF;
+  text-align: start;
+  font-family: "Cormorant Garamond", serif;
+  font-size: var(--px-18-1920);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+.header__container .header-content .about-us__inform .wrapp__contacts span:nth-child(3) {
+  margin: var(--px-15-1920) 0px;
+}
+.header__container .header-content .about-us__inform .wrapp__working-hours {
+  width: var(--px-315-1920);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  left: calc(50% - var(--px-157-1920));
+  margin: var(--px-60-1920) 0px 0px 0px;
+}
+.header__container .header-content .about-us__inform .wrapp__working-hours h3 {
+  width: 100%;
+  color: #FFF;
+  text-align: start;
+  font-family: "Garamond", serif;
+  font-size: var(--px-24-1920);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  margin: 0px 0px var(--px-25-1920) 0px;
+}
+.header__container .header-content .about-us__inform .wrapp__working-hours span {
+  width: 100%;
+  color: #FFF;
+  text-align: start;
+  font-family: "Cormorant Garamond", serif;
+  font-size: var(--px-18-1920);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+.header__container .header-content .about-us__inform .wrapp__working-hours span:nth-child(3) {
+  margin: var(--px-15-1920) 0px;
+}
+.header__container .header-content .about-us__button:focus {
+  z-index: -1;
+}
+.header__container .header-content .about-us__button:focus ~ .about-us__close {
+  animation: visible-close 0.25s normal linear forwards running;
+  animation-delay: 0.35s;
+}
+.header__container .header-content .about-us__close:focus {
+  animation: hidden-close 0.001s normal linear forwards running;
+}
+.header__container .header-content .about-us__button:focus ~ .about-us__inform {
+  animation: floats-out 0.35s normal linear forwards;
+}
+.header__container .header-content .about-us__close:focus ~ .about-us__inform {
+  animation: hiding 0.35s normal linear forwards running;
+}
+@keyframes floats-out {
+  0% {
+    position: absolute;
+    right: calc(var(--px-360-1920) * -2.21);
+    top: calc(var(--px-30-1920) * -1);
+  }
+  100% {
+    display: flex;
+    position: absolute;
+    right: calc(var(--px-360-1920) * -1);
+    top: calc(var(--px-30-1920) * -1);
+  }
+}
+@keyframes hiding {
+  0% {
+    position: absolute;
+    right: calc(var(--px-360-1920) * -1);
+    top: calc(var(--px-30-1920) * -1);
+  }
+  100% {
+    position: absolute;
+    right: calc(var(--px-360-1920) * -2.21);
+    top: calc(var(--px-30-1920) * -1);
+  }
+}
+
+.home-page__container {
+  height: 100vh;
+  position: relative;
+  top: calc(var(--px-93-1920) * -1);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/img/bgc.png);
+  background-size: 1920px 1080px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0px 0px calc(var(--px-93-1920) * -1) 0px;
+}
+.home-page__container .home-page__content {
+  width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+}
+.home-page__container .home-page__content .wpapp-title {
+  width: calc(var(--px-400-1920) * 2.4025);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-page__container .home-page__content .wpapp-title h1 {
+  color: #FFF;
+  text-align: center;
+  font-family: "Garamond", serif;
+  font-size: var(--px-72-1920);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+.home-page__container .home-page__content .wrapp__mouse-down {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: var(--px-100-1920);
+}
+.home-page__container .home-page__content .wrapp__mouse-down .wrapp__svg svg {
+  width: var(--px-20-1920);
+  height: var(--px-30-1920);
+  flex-shrink: 0;
+}
+.home-page__container .home-page__content .wrapp__mouse-down .wpapp__paragraph {
+  margin: 0px 0px 0px var(--px-20-1920);
+}
+.home-page__container .home-page__content .wrapp__mouse-down .wpapp__paragraph span {
+  color: #FFF;
+  font-family: "Cormorant Garamond", serif;
+  font-size: var(--px-18-1920);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+}
+
+.about-us__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-us__container .about-us__content {
+  width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.about-us__container .about-us__content .wpapp__svg {
+  width: 100%;
+  text-align: center;
+  margin: var(--px-120-1920) 0px 0px 0px;
+}
+.about-us__container .about-us__content .wpapp__svg svg {
+  width: var(--px-80-1920);
+  height: var(--px-64-1920);
+  flex-shrink: 0;
+}
+.about-us__container .about-us__content .wrapp__inform {
+  width: calc(var(--px-400-1920) * 2.14);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: var(--px-60-1920) 0px var(--px-95-1920) 0px;
+}
+.about-us__container .about-us__content .wrapp__inform p {
+  color: #FFF;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: var(--px-27-1920);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+}
+.about-us__container .about-us__content .wrapp__inform p:nth-child(1) {
+  margin: 0px 0px var(--px-27-1920) 0px;
+}
+
+.our-story__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #CDAA7D;
+}
+.our-story__container .our-story__content {
+  width: calc(var(--px-400-1920) * 3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.our-story__container .our-story__content .first-row {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.our-story__container .our-story__content .first-row .wrapp-img {
+  width: var(--px-400-1920);
+  height: var(--px-400-1920);
+  background-color: rgb(246, 246, 244);
+  margin: var(--px-50-1920) 0px;
+}
+.our-story__container .our-story__content .second-row {
+  width: 50%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.our-story__container .our-story__content .second-row .wrapp-paragraph {
+  width: 90%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.our-story__container .our-story__content .second-row .wrapp-paragraph .wrapp-title {
+  margin: 0px 0px var(--px-20-1920) 0px;
+}
+.our-story__container .our-story__content .second-row .wrapp-paragraph .wrapp-title h2 {
+  color: #000;
+  text-align: start;
+  font-family: "Cormorant Garamond", serif;
+  font-size: var(--px-40-1920);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+.our-story__container .our-story__content .second-row .wrapp-paragraph .wrapp-text p {
+  color: #000;
+  text-align: start;
+  font-family: "Garamond", serif;
+  font-size: var(--px-18-1920);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+}
+.our-story__container .our-story__content .second-row .wrapp-paragraph .learn-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: var(--px-1-1920) solid #000;
+  margin: var(--px-20-1920) 0px 0px 0px;
+  padding: var(--px-7-1920) var(--px-15-1920);
+  outline: none;
+}
+.our-story__container .our-story__content .second-row .wrapp-paragraph .learn-more a {
+  color: #000;
+  text-align: center;
+  font-family: "Garamond", serif;
+  font-size: var(--px-20-1920);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+}
+
+.popular-goods__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111111;
+}
+.popular-goods__container .popular-goods__content {
+  width: calc(var(--px-400-1920) * 3);
+  justify-content: center;
+  align-items: center;
+}
+.popular-goods__container .popular-goods__content .wrapp-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: var(--px-100-1920);
+}
+.popular-goods__container .popular-goods__content .wrapp-title h3 {
+  color: #CDAA7D;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: var(--px-48-1920);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+.popular-goods__container .popular-goods__content .wrapp__product {
+  height: calc(var(--px-400-1920) * 1.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  margin: var(--px-30-1920) 0px;
+  position: relative;
+}
+.popular-goods__container .popular-goods__content .wrapp__product .first-row {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  position: relative;
+}
+.popular-goods__container .popular-goods__content .wrapp__product .first-row .photo {
+  width: var(--px-400-1920);
+  height: var(--px-400-1920);
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 10;
+}
+.popular-goods__container .popular-goods__content .wrapp__product .second-row {
+  width: 50%;
+  height: var(--px-400-1920);
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popular-goods__container .popular-goods__content .wrapp__product .second-row .wrapp__paragraph {
+  width: 90%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--px-20-1920);
+  overflow: visible;
+}
+.popular-goods__container .popular-goods__content .wrapp__product .second-row .wrapp__paragraph h2 {
+  color: rgba(205, 170, 125, 0.8);
+  width: 100%;
+  text-align: start;
+  font-family: "Garamond", serif;
+  font-size: var(--px-24-1920);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+.popular-goods__container .popular-goods__content .wrapp__product .second-row .wrapp__paragraph p {
+  color: rgba(205, 170, 125, 0.8);
+  text-align: start;
+  font-family: "Cormorant Garamond", serif;
+  font-size: var(--px-18-1920);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+.popular-goods__container .popular-goods__content .wrapp__product .second-row .background-line {
+  position: absolute;
+  top: calc(var(--px-400-1920) * 1.05);
+  right: var(--px-150-1920);
+  width: calc(var(--px-400-1920) * 2);
+  height: var(--px-1-1920);
+  background-color: #CDAA7D;
+}
+.popular-goods__container .popular-goods__content .wrapp__product-right {
+  height: calc(var(--px-400-1920) * 1.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: var(--px-30-1920) 0px;
+}
+.popular-goods__container .popular-goods__content .wrapp__product-right .first-row {
+  width: 50%;
+  height: var(--px-400-1920);
+  z-index: 3;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  position: relative;
+}
+.popular-goods__container .popular-goods__content .wrapp__product-right .first-row .wrapp__paragraph {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--px-20-1920);
+}
+.popular-goods__container .popular-goods__content .wrapp__product-right .first-row .wrapp__paragraph h2 {
+  color: rgba(205, 170, 125, 0.8);
+  width: 100%;
+  text-align: end;
+  font-family: "Garamond", serif;
+  font-size: var(--px-24-1920);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+.popular-goods__container .popular-goods__content .wrapp__product-right .first-row .wrapp__paragraph p {
+  color: rgba(205, 170, 125, 0.8);
+  text-align: end;
+  font-family: "Cormorant Garamond", serif;
+  font-size: var(--px-18-1920);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+.popular-goods__container .popular-goods__content .wrapp__product-right .first-row .background-line {
+  position: absolute;
+  top: calc(var(--px-350-1920) * 1.05);
+  left: var(--px-150-1920);
+  width: calc(var(--px-400-1920) * 2);
+  height: var(--px-1-1920);
+  background-color: #CDAA7D;
+}
+.popular-goods__container .popular-goods__content .wrapp__product-right .second-row {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  position: relative;
+}
+.popular-goods__container .popular-goods__content .wrapp__product-right .second-row .photo {
+  width: var(--px-400-1920);
+  height: var(--px-400-1920);
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 3;
+}

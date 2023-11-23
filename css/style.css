@@ -412,7 +412,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(/img/bgc.png);
+  background-image: url(img/bgc.png);
   background-size: 1920px 1080px;
   background-repeat: no-repeat;
   background-position: center;

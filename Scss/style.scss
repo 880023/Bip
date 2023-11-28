@@ -144,22 +144,24 @@ a {
 // serif;
 
 .wrapp-page {
-
+     width: 100vw;
      background-color: #111111;
-     z-index:-1;
-     overflow: hidden;
+     z-index: -1;
+     overflow-y: hidden;
+     
 }
 
 .header__container {
+     width: 100vw;
      display: flex;
      justify-content: center;
      align-items: center;
      background: transparent;
-     position: relative;
      z-index: 2;
 
 
      .header-content {
+          width: calc(var(--px-400-1920)* 3);
           font-family: 'Cormorant Garamond',serif;
           display: flex;
           justify-content: center;
@@ -167,6 +169,7 @@ a {
           position: relative;
           margin: var(--px-30-1920) 0px 0px 0px;
           border-bottom: var(--px-1-1920) solid rgba($color: #FFF, $alpha: 0.5);
+          z-index: 3;
 
           .instagram {
                width: var(--px-26-1920);
@@ -259,36 +262,22 @@ a {
           }
 
           .about-us__button {
+               position: relative;
                background: transparent;
                margin: 0px 0px 0px var(--px-104-1920);
                border: none;
                cursor: pointer;
-               transition:  opacity 0.25s;
+               opacity: 1;
+               z-index: 5;
+               transition: 0.2s;
 
                .about-us__size {
                     width: var(--px-50-1920);
                     height: var(--px-20-1920);
+                    z-index: 5;
+                    padding: 20px;
 
                }
-          }
-
-          .about-us__close {
-               position: absolute;
-               right: 0px;
-               background: transparent;
-               border: none;
-               z-index: -2;
-               opacity: 0;
-               cursor: pointer;
-               animation: visible-elem 0.25s normal linear forwards paused;
-               // transition: all 0.25s;
-               // transition-delay:  0.4s;
-
-               .close__size {
-                         width: var(--px-32-1920);
-                         height: var(--px-32-1920);
-                    }
-
           }
 
           @keyframes visible-close {
@@ -325,117 +314,6 @@ a {
                
           }
 
-          
-
-          .about-us__inform {
-               width: calc(var(--px-400-1920)* 1.0875);
-               height: 101vh;
-               display: flex;
-               flex-shrink: 0;
-               flex-wrap: wrap;
-               position: absolute;
-               right: calc(var(--px-360-1920)* -2.21);
-               top: calc(var(--px-30-1920)* -1);
-               background: #111;
-
-     
-               .wrapp__text {
-                    width: var(--px-315-1920);
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    position: relative;
-                    left: calc(50% - var(--px-157-1920));
-                    margin: var(--px-246-1920) 0px 0px 0px;
-     
-                    p {
-                         color: #FFF;
-                         font-family: 'Cormorant Garamond', serif;
-                         font-size: var(--px-18-1920);
-                         font-style: normal;
-                         font-weight: 400;
-                         line-height: 130%;
-     
-                    }
-               }
-     
-               .wrapp__contacts {
-                    width: var(--px-315-1920);
-                    display: flex;
-                    justify-content: center;
-                    align-items: start;
-                    flex-wrap: wrap;
-                    position: relative;
-                    left: calc(50% - var(--px-157-1920));
-                    margin: var(--px-80-1920) 0px 0px 0px;
-
-                    h3 {
-                         width: 100%;
-                         color: #FFF;
-                         text-align: start;
-                         font-family: 'Garamond', serif;
-                         font-size: var(--px-24-1920);
-                         font-style: normal;
-                         font-weight: 700;
-                         line-height: 120%;
-                         margin: 0px 0px var(--px-25-1920) 0px;
-                    }
-     
-                    span {
-                         width: 100%;
-                         color: #FFF;
-                         text-align: start;
-                         font-family: 'Cormorant Garamond', serif;
-                         font-size: var(--px-18-1920);
-                         font-style: normal;
-                         font-weight: 400;
-                         line-height: 130%;
-                    }
-
-                    span:nth-child(3) {
-                         margin: var(--px-15-1920) 0px;
-                    }
-               }
-     
-               .wrapp__working-hours {
-                    width: var(--px-315-1920);
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-wrap: wrap;
-                    position: relative;
-                    left: calc(50% - var(--px-157-1920));
-                    margin: var(--px-60-1920) 0px 0px 0px;
-
-     
-                    h3 {
-                         width: 100%;
-                         color: #FFF;
-                         text-align: start;
-                         font-family: 'Garamond', serif;
-                         font-size: var(--px-24-1920);
-                         font-style: normal;
-                         font-weight: 700;
-                         line-height: 120%;
-                         margin: 0px 0px var(--px-25-1920) 0px;
-                    }
-     
-                    span {
-                         width: 100%;
-                         color: #FFF;
-                         text-align: start;
-                         font-family: 'Cormorant Garamond', serif;
-                         font-size: var(--px-18-1920);
-                         font-style: normal;
-                         font-weight: 400;
-                         line-height: 130%;
-                    }
-
-                     span:nth-child(3) {
-                         margin: var(--px-15-1920) 0px;
-                    }
-               }
-          }
           .about-us__button:focus {
                z-index: -1;
           }
@@ -462,7 +340,7 @@ a {
           @keyframes floats-out {
                     0% {
                          position: absolute;
-                         right: calc(var(--px-360-1920)* -2.21);
+                         right: calc(var(--px-400-1920)* -2.21);
                          top: calc(var(--px-30-1920)* -1);
                
                     }
@@ -493,6 +371,130 @@ a {
           
       
      }
+          .about-us__close {
+               position: absolute;
+               top: var(--px-45-1920);
+               right: var(--px-360-1920);
+               background: transparent;
+               border: none;
+               z-index: -1;
+               opacity: 0;
+               // cursor: pointer;
+               // animation: visible-elem 0.25s normal linear forwards paused;
+               transition: all 0.25s;
+               transition-delay:  0.4s;
+     
+               .close__size {
+                    width: var(--px-32-1920);
+                    height: var(--px-32-1920);
+                    cursor:pointer;
+               }
+     
+          }
+
+           .about-us__inform {
+                width: calc(var(--px-400-1920)* 1.0875);
+                height: 104vh;
+                display: flex;
+                flex-shrink: 0;
+                flex-wrap: wrap;
+                position: absolute;
+                right: calc(var(--px-400-1920)* -1.0875);
+                top: calc(var(--px-30-1920)* -1);
+                background: #111;
+                transition: 0.35s;
+                z-index: 3;
+     
+     
+                .wrapp__text {
+                     width: var(--px-315-1920);
+                     display: flex;
+                     justify-content: center;
+                     align-items: center;
+                     position: relative;
+                     left: calc(50% - var(--px-157-1920));
+                     margin: var(--px-150-1920) 0px 0px 0px;
+     
+                     p {
+                          color: #FFF;
+                          font-family: 'Cormorant Garamond', serif;
+                          font-size: var(--px-18-1920);
+                          font-style: normal;
+                          font-weight: 400;
+                          line-height: 130%;
+     
+                     }
+                }
+     
+                .wrapp__contacts {
+                     width: var(--px-315-1920);
+                     position: relative;
+                     left: calc(50% - var(--px-157-1920));
+                     margin: var(--px-80-1920) 0px 0px 0px;
+     
+                     h3 {
+                          width: 100%;
+                          color: #FFF;
+                          text-align: start;
+                          font-family: 'Garamond', serif;
+                          font-size: var(--px-24-1920);
+                          font-style: normal;
+                          font-weight: 700;
+                          line-height: 120%;
+                          margin: 0px 0px var(--px-25-1920) 0px;
+                     }
+     
+                     p {
+                          width: 100%;
+                          color: #FFF;
+                          text-align: start;
+                          font-family: 'Cormorant Garamond', serif;
+                          font-size: var(--px-18-1920);
+                          font-style: normal;
+                          font-weight: 400;
+                          line-height: 100%;
+                     }
+     
+                     p:nth-child(3) {
+                          margin: var(--px-10-1920) 0px;
+                     }
+                }
+     
+                .wrapp__working-hours {
+                     width: var(--px-315-1920);
+                     position: relative;
+                     left: calc(50% - var(--px-157-1920));
+                    //  margin: var(--px-60-1920) 0px 0px 0px;
+     
+     
+                     h3 {
+                          width: 100%;
+                          color: #FFF;
+                          text-align: start;
+                          font-family: 'Garamond', serif;
+                          font-size: var(--px-24-1920);
+                          font-style: normal;
+                          font-weight: 700;
+                          line-height: 100%;
+                          margin: 0px 0px var(--px-15-1920) 0px;
+                     }
+     
+                     p {
+                          width: 100%;
+                          color: #FFF;
+                          text-align: start;
+                          font-family: 'Cormorant Garamond', serif;
+                          font-size: var(--px-18-1920);
+                          font-style: normal;
+                          font-weight: 400;
+                          line-height: 130%;
+                     }
+     
+                     p:nth-child(3) {
+                          margin: var(--px-10-1920) 0px;
+                     }
+                }
+           }
 
 }
 
@@ -575,7 +577,7 @@ a {
      align-items: center;
 
      .about-us__content {
-          width: 1200px;
+          width: calc(var(--px-400-1920)* 3);
           display: flex;
           justify-content: center;
           align-items: center;
@@ -724,7 +726,7 @@ a {
      display: flex;
      justify-content: center;
      align-items: center;
-     border-top: 1px solid #CDAA7D;
+     // border-top: var(--px-2-1920) solid #CDAA7D;
 
      .bestsellers__content {
           width: calc(var(--px-400-1920) * 3);
@@ -827,7 +829,7 @@ a {
           width: calc(var(--px-400-1920)* 3);
           justify-content: center;
           align-items: center;
-               border-top: 1px solid #CDAA7D;
+          border-top: var(--px-2-1920) solid #CDAA7D;
 
           .wrapp-title {
                display: flex;
@@ -1076,7 +1078,8 @@ a {
                justify-content: center;
                align-items: center;
                flex-wrap: wrap;
-               border-top: 1px solid #CDAA7D;
+               border-top: var(--px-2-1920) solid #CDAA7D;
+
 
                .wrapp-title {
                     display: flex;
@@ -1308,12 +1311,14 @@ a {
           display: flex;
           justify-content: center;
           align-items: center;
-          border-top: 1px solid #CDAA7D;
+          flex-wrap: wrap;
+          border-top: var(--px-2-1920) solid #CDAA7D;
           padding: var(--px-100-1920) 0px 0px 0px;
           margin: 0px 0px var(--px-100-1920) 0px;
 
 
           .first-block {
+               
                display: flex;
                justify-content: space-around;
                align-items: start;
@@ -1527,6 +1532,7 @@ a {
           }
 
           .second-block {
+               color: #FFF;
 
 
                .wrapp__social {
@@ -1546,6 +1552,1623 @@ a {
           }
      }
 }
+
+// ------------------------------------------------ adaptive
+
+@media screen and (max-width: 2561px) {
+     
+     .home-page__container {
+          background-image: url(../img/bgc.png);
+          background-size: 2560px 1440px;
+
+          .home-page__content {
+               width: calc(var(--px-400-2560)* 3.6);
+          }
+     }
+
+     .about-us__container {
+
+          .about-us__content {
+               width: calc(var(--px-400-2560)* 3.6);
+          }
+     }
+
+     .our-story__conteiner{
+
+          .our-story__content {
+               width: calc(var(--px-400-2560)* 3.6);
+          }
+     }
+    
+}
+
+
+@media screen and (max-width: 1440px) {
+     .header__container {
+
+
+          .header-content {
+               width: calc(var(--px-400-1440)* 3);
+               margin: var(--px-30-1440) 0px 0px 0px;
+               border-bottom: var(--px-1-1440) solid rgba($color: #FFF, $alpha: 0.5);
+
+               .instagram {
+                    width: var(--px-26-1440);
+                    height: var(--px-26-1440);
+                    margin: 0px var(--px-110-1440) 0px 0px;
+
+                    .inst-size {
+                         width: var(--px-24-1440);
+                         height: var(--px-24-1440);
+                    }
+               }
+
+
+               .menu {
+
+
+                    .menu-list {
+                         gap: var(--px-80-1440);
+
+
+                         .menu-item {
+
+                         }
+                         
+                         .menu-link {
+                              font-size: var(--px-18-1440);
+                         }
+
+                         
+
+                         .menu-link:hover {
+                              font-size:var(--px-18-1440);
+                         }
+
+                         .menu-link:after {
+                              content: "";
+                              bottom:calc(var(--px-2-1440) * -1);
+                              height: var(--px-1-1440);
+                         }
+
+                    }
+                         
+               }
+               
+               .wrapp-logo {
+
+                    margin: 0px var(--px-120-1440);
+
+                    a {
+                         .img-size {
+                                   width: var(--px-60-1440);
+                                   height: var(--px-60-1440);
+                                   border-radius: 60px;
+                              }
+                    }
+               }
+
+               .about-us__button {
+                    margin: 0px 0px 0px var(--px-104-1440);
+
+                    .about-us__size {
+                         width: var(--px-50-1440);
+                         height: var(--px-20-1440);
+
+                    }
+               }
+
+               .about-us__close {
+
+                    .close__size {
+                              width: var(--px-32-1440);
+                              height: var(--px-32-1440);
+                         }
+
+               }
+
+               
+
+               .about-us__inform {
+                    width: calc(var(--px-400-1440)* 1.0875);
+                    right: calc(var(--px-400-1440)* -2.21);
+                    top: calc(var(--px-30-1440)* -1);
+
+          
+                    .wrapp__text {
+                         width: var(--px-315-1440);
+                         left: calc(50% - var(--px-157-1440));
+                         margin: var(--px-246-1440) 0px 0px 0px;
+          
+                         p {
+                              font-size: var(--px-18-1440);
+          
+                         }
+                    }
+          
+                    .wrapp__contacts {
+                         width: var(--px-315-1440);
+                         left: calc(50% - var(--px-157-1440));
+                         margin: var(--px-80-1440) 0px 0px 0px;
+
+                         h3 {
+                              font-size: var(--px-24-1440);
+                              margin: 0px 0px var(--px-25-1440) 0px;
+                         }
+          
+                         span {
+                              font-size: var(--px-18-1440);
+                         }
+
+                         span:nth-child(3) {
+                              margin: var(--px-15-1440) 0px;
+                         }
+                    }
+          
+                    .wrapp__working-hours {
+                         width: var(--px-315-1440);
+                         left: calc(50% - var(--px-157-1440));
+                         margin: var(--px-60-1440) 0px 0px 0px;
+
+          
+                         h3 {
+                              font-size: var(--px-24-1440);
+                              margin: 0px 0px var(--px-25-1440) 0px;
+                         }
+          
+                         span {
+                              font-size: var(--px-18-1440);
+                         }
+
+                         span:nth-child(3) {
+                              margin: var(--px-15-1440) 0px;
+                         }
+                    }
+               }
+               
+
+               
+               
+          
+          }
+
+     }
+
+     .home-page__container {
+          top: calc(var(--px-93-1440)* -1);
+          margin: 0px 0px calc(var(--px-93-1440)* -1) 0px;
+
+          .home-page__content {
+               width: calc(var(--px-400-1440)* 3);
+
+               .wpapp-title {
+                    width: calc(var(--px-400-1440)* 2.4025);
+                    top: calc(50vh - var(--px-100-1440));
+
+                    h1 {
+                         font-size: var(--px-72-1440);
+                    }
+               }
+
+               .wrapp__mouse-down {
+                    bottom: var(--px-100-1440);
+
+                    .wrapp__svg {
+
+                         svg {
+                              width: var(--px-20-1440);
+                              height: var(--px-30-1440);
+                         }
+                    }
+                    
+                    .wpapp__paragraph {
+                         margin: 0px 0px 0px var(--px-20-1440);
+
+                         span{
+                              font-size: var(--px-18-1440);
+                         }
+                    }    
+
+               }
+          }
+     }
+
+     .about-us__container {
+
+          .about-us__content {
+               width: calc(var(--px-400-1440)* 3);
+
+               .wpapp__svg {
+                    margin: var(--px-120-1440) 0px 0px 0px;
+
+
+                    svg {
+                         width: var(--px-80-1440);
+                         height: var(--px-64-1440);
+                    }
+               }
+               
+               .wrapp__inform {
+                    width: calc(var(--px-400-1440)* 2.14) ;
+                    margin: var(--px-60-1440) 0px var(--px-95-1440) 0px;
+
+                    p {
+                         font-size: var(--px-27-1440);
+                    }
+                    p:nth-child(1) {
+                         margin: 0px 0px var(--px-27-1440) 0px;
+                    }
+               }
+          }
+          
+     }
+
+     .our-story__container {
+
+          .our-story__content {
+               width: calc(var(--px-400-1440)* 3);
+
+               .first-row {
+
+
+                    .wrapp-img {
+                         width: var(--px-400-1440);
+                         height: var(--px-400-1440);
+                         margin: var(--px-50-1440) 0px;
+
+                         img {
+                              
+                         }
+                    }
+               }
+
+               .second-row {
+
+                    .wrapp-paragraph {
+
+
+                         .wrapp-title {
+                              margin: 0px 0px var(--px-20-1440) 0px;
+
+                              h2 {
+                                   font-size: var(--px-40-1440);
+
+                              }
+                         }
+                         
+                         .wrapp-text {
+
+                              p {
+                                   font-size: var(--px-18-1440);
+
+                              }
+                         }
+
+                         .learn-more {
+                              border: var(--px-1-1440) solid #000;
+                              margin: var(--px-20-1440) 0px 0px 0px;
+                              padding: var(--px-7-1440)var(--px-15-1440);
+
+                              a {
+                                   font-size: var(--px-20-1440);
+                              }
+                         }
+
+                    }
+               }
+          }
+     }
+
+     .bestsellers__container {
+
+          .bestsellers__content {
+               width: calc(var(--px-400-1440) * 3);
+               margin: 0px 0px var(--px-200-1440) 0px;
+
+
+               .wrapp__title {
+                    margin: var(--px-100-1440) 0px 0px 0px;
+
+
+                    h3 {
+                         font-size: var(--px-72-1440);
+
+                    }
+               }
+
+               .wrapp__cards {
+                    width: calc(var(--px-400-1440) * 3);
+                    margin: var(--px-70-1440) 0px 0px 0px ;
+
+
+                    .wrapp__card {
+                         width: var(--px-350-1440);
+                         height: calc(var(--px-400-1440)* 1.125);
+
+
+                         img {
+                              width: var(--px-350-1440);
+                              height: calc(var(--px-400-1440)* 1.125);
+
+                         }
+
+                         .wrapp__text {
+                              margin: var(--px-20-1440) 0px 0px 0px;
+
+
+                              .product-name {
+                                   font-size: var(--px-30-1440);
+                              }
+
+                              .product-price {
+                                   font-size: var(--px-24-1440);
+                              }
+                         }
+                         
+                    }
+               }
+          }
+     }
+
+     .popular-goods__container {
+
+          .popular-goods__content {
+               width: calc(var(--px-400-1440)* 3);
+               border-top: var(--px-2-1440) solid #CDAA7D;
+
+               .wrapp-title {
+                    margin: var(--px-100-1440);
+
+                    h3 {
+                         font-size: var(--px-48-1440);
+                    }
+               }
+
+               .wrapp__product {
+                    height: calc(var(--px-400-1440)* 1.25);
+                    margin: var(--px-30-1440) 0px;
+
+                    .first-row {
+
+                         .photo {
+                              width: var(--px-400-1440);
+                              height: var(--px-400-1440);
+
+                              
+                         }
+
+                    
+                    }
+
+
+                    .second-row {
+                         height: var(--px-400-1440);
+
+                         .wrapp__paragraph {
+                              gap: var(--px-20-1440);
+
+
+                              h2 {
+                                   font-family: 'Garamond', serif;
+                                   font-size: var(--px-28-1440);
+                              }
+
+                              p {
+                                   font-size: var(--px-22-1440);
+                              }
+
+                              .wrapp__button {
+                              
+
+                                   .go__store {
+                                        padding: var(--px-9-1440) var(--px-15-1440);
+                                        border: var(--px-1-1440) solid #CDAA7D;
+                                   
+                                             a {
+                                                  font-size: var(--px-22-1440);
+
+                                             }
+                                   }
+                              }
+                         }
+
+                         .background-line {
+                              top: calc(var(--px-400-1440)* 1.05);
+                              right: var(--px-150-1440);
+                              width: calc(var(--px-400-1440) * 2);
+                              height: var(--px-1-1440);
+                         }
+
+                         
+                    }
+                    
+                         
+               }
+
+               .wrapp__product-right {
+                    height: calc(var(--px-400-1440)* 1.25);
+                    margin: var(--px-30-1440) 0px;
+
+                    .first-row {
+                         height: var(--px-400-1440);
+
+                         .wrapp__paragraph {
+                              gap: var(--px-20-1440);
+
+
+                              h2 {
+                                   font-size: var(--px-24-1440);
+                              }
+
+                              p {
+                                   font-size: var(--px-18-1440);
+                              }
+
+                              .wrapp__button {
+                                   margin: var(--px-10-1440) 0px 0px 0px;
+                              
+
+                                   .go__store {
+                                        padding: var(--px-9-1440) var(--px-15-1440);
+                                        border: var(--px-1-1440) solid #CDAA7D;
+                                   
+                                             a {
+                                                  font-size: var(--px-22-1440);
+
+                                             }
+                                   }
+                              }
+                         }
+
+                         .background-line {
+                              top: calc(var(--px-350-1440)* 1.05);
+                              left: var(--px-150-1440);
+                              width: calc(var(--px-400-1440) * 2);
+                              height: var(--px-1-1440);
+                         }
+                    }
+
+                    .second-row {
+                    
+                              .photo {
+                                   width: var(--px-400-1440);
+                                   height: var(--px-400-1440);
+
+                              }
+
+
+                              
+                         }
+               }
+
+               .wrapp__beauty-hair {
+                    border-top: var(--px-2-1440) solid #CDAA7D;
+
+
+                    .wrapp-title {
+                         margin: var(--px-100-1440);
+
+                         h3 {
+                              font-size: var(--px-48-1440);
+                              border-bottom: var(--px-2-1440) solid #CDAA7D;
+                         }
+                    }
+
+                    .wrapp__product {
+                         height: calc(var(--px-400-1440)* 1.25);
+                         margin: var(--px-30-1440) 0px;
+
+                         .first-row {
+
+                              .photo {
+                                   width: var(--px-400-1440);
+                                   height: var(--px-400-1440);
+                              }
+
+                         
+                         }
+
+
+                         .second-row {
+                              height: var(--px-400-1440);
+
+                              .wrapp__paragraph {
+                                   gap: var(--px-20-1440);
+
+
+                                   h2 {
+                                        font-size: var(--px-24-1440);
+                                   }
+
+                                   p {
+                                        font-size: var(--px-18-1440);
+                                   }
+
+                                   
+
+                                   
+                              }
+
+                              .background-line {
+                                   top: calc(var(--px-400-1440)* 1.05);
+                                   right: var(--px-150-1440);
+                                   width: calc(var(--px-400-1440) * 2);
+                                   height: var(--px-1-1440);
+                              }
+
+                              
+                         }
+                         
+                              
+                    }
+
+                    .wrapp__product-right {
+                         height: calc(var(--px-400-1440)* 1.25);
+                         margin: var(--px-30-1440) 0px;
+
+                         .first-row {
+                              height: var(--px-400-1440);
+
+                              .wrapp__paragraph {
+                                   gap: var(--px-20-1440);
+
+
+                                   h2 {
+                                        font-size: var(--px-24-1440);
+                                   }
+
+                                   p {
+                                        font-size: var(--px-18-1440);
+                                   }
+
+                                   .wrapp__button {
+                              
+
+                                        .go__store {
+                                             padding: var(--px-9-1440) var(--px-15-1440);
+                                             border: var(--px-1-1440) solid #CDAA7D;
+                                        
+                                             a {
+                                                  font-size: var(--px-22-1440);
+
+                                             }
+                                        }
+                                   }
+                              }
+
+                              .background-line {
+                                   top: calc(var(--px-350-1440)* 1.05);
+                                   left: var(--px-150-1440);
+                                   width: calc(var(--px-400-1440) * 2);
+                                   height: var(--px-1-1440);
+                              }
+                         }
+
+                         .second-row {
+                         
+                              .photo {
+                                   width: var(--px-400-1440);
+                                   height: var(--px-400-1440);
+
+                              }
+
+                         }
+                    }
+               }
+                    
+          }
+          
+               
+     }
+
+     .footer__container {
+
+          .footer__content {
+               width: calc(var(--px-400-1440) * 3);
+               border-top: var(--px-2-1440) solid #CDAA7D;
+               padding: var(--px-100-1440) 0px 0px 0px;
+               margin: 0px 0px var(--px-100-1440) 0px;
+
+
+               .first-block {
+
+
+
+                    .first__row {
+
+                         .wrapp-logo {
+
+
+                              img {
+                                   width: var(--px-120-1440);
+                                   height: var(--px-120-1440);
+
+                              }
+                         }
+
+                         .wrapp__slogan {
+
+
+                              span {
+                                        font-size: var(--px-24-1440);
+
+                              }
+                         }
+                    }
+
+                    .second__row {
+                         margin: var(--px-60-1440) 0px var(--px-30-1440) 0px ;
+
+                         .menu {
+
+
+                              .menu-list {
+                                   gap: var(--px-5-1440);
+
+
+                                   .menu-item {
+                                   }
+                                   
+                                   .menu-link {
+                                        font-size: var(--px-20-1440);
+                                   }
+
+                                   .menu-link:hover {
+                                   }
+
+                                   .menu-link:after {
+                                        content: "";
+                                        bottom:calc(var(--px-2-1440) * -1);
+                                        height: var(--px-1-1440);
+                                   }
+
+                              }
+                         }
+                    }
+
+                    .third__row {
+                         margin: var(--px-60-1440);
+
+                         .wrapp__contacts{
+                              width: var(--px-315-1440);
+                         
+                              h3 {
+                                   font-size: var(--px-24-1440);
+                                   margin: 0px 0px var(--px-15-1440) 0px;
+                              }
+                         
+                              span {
+                                   font-size: var(--px-22-1440);
+                              }
+
+                         
+                              span:nth-child(3) {
+                                   margin: var(--px-10-1440) 0px;
+                              }
+
+                         }
+                    
+
+                    }
+
+                    .fourth__row {
+                         margin: var(--px-60-1440) 0px 0px 0px;
+
+                         .wrapp__working-hours {
+                              width: var(--px-315-1440);
+                         
+                         
+                              h3 {
+                                   font-size: var(--px-24-1440);
+                                   margin: 0px 0px var(--px-25-1440) 0px;
+                              }
+
+                         
+                              span {
+                                   font-size: var(--px-18-1440);
+                              }
+                         
+                              span:nth-child(3) {
+                                   margin: var(--px-15-1440) 0px;
+                              }
+                         }
+                    }    
+                    
+               }
+
+               .second-block {
+                    color: #FFF;
+
+
+                    .wrapp__social {
+
+
+                         .wrapp__facebook {}
+
+                         .wrapp__tiktok {}
+
+                         .wrapp__instagram {}
+
+                         .wrapp__telegram {}
+
+                         .wrapp__whatsapp {}
+
+                    }
+               }
+          }
+     }
+}
+
+// @media screen and (max-width: 1200px) {
+//      .header-content {
+//                width: calc(var(--px-400-1440)* 1.8);
+//                margin: var(--px-30-1024) 0px 0px 0px;
+//                border-bottom: var(--px-1-1024) solid rgba($color: #FFF, $alpha: 0.5);
+     
+//                .instagram {
+//                     width: var(--px-26-1024);
+//                     height: var(--px-26-1024);
+//                     margin: 0px var(--px-110-1024) 0px 0px;
+     
+//                     .inst-size {
+//                          width: var(--px-24-1024);
+//                          height: var(--px-24-1024);
+//                     }
+//                }
+     
+     
+//                .menu {
+     
+     
+//                     .menu-list {
+//                          gap: var(--px-80-1024);
+     
+     
+//                          .menu-item {}
+     
+//                          .menu-link {
+//                               font-size: var(--px-18-1024);
+//                          }
+     
+     
+     
+//                          .menu-link:hover {
+//                               font-size: var(--px-18-1024);
+//                          }
+     
+//                          .menu-link:after {
+//                               content: "";
+//                               bottom: calc(var(--px-2-1024) * -1);
+//                               height: var(--px-1-1024);
+//                          }
+     
+//                     }
+     
+//                }
+     
+//                .wrapp-logo {
+     
+//                     margin: 0px var(--px-120-1024);
+     
+//                     a {
+//                          .img-size {
+//                               width: var(--px-60-1024);
+//                               height: var(--px-60-1024);
+//                               border-radius: 60px;
+//                          }
+//                     }
+//                }
+     
+//                .about-us__button {
+//                     margin: 0px 0px 0px var(--px-104-1024);
+     
+//                     .about-us__size {
+//                          width: var(--px-50-1024);
+//                          height: var(--px-20-1024);
+     
+//                     }
+//                }
+     
+//                .about-us__close {
+     
+//                     .close__size {
+//                          width: var(--px-32-1024);
+//                          height: var(--px-32-1024);
+//                     }
+     
+//                }
+     
+     
+     
+//                .about-us__inform {
+//                     width: calc(var(--px-400-1024)* 1.0875);
+//                     right: calc(var(--px-400-1024)* -2.21);
+//                     top: calc(var(--px-30-1024)* -1);
+     
+     
+//                     .wrapp__text {
+//                          width: var(--px-315-1024);
+//                          left: calc(50% - var(--px-157-1024));
+//                          margin: var(--px-246-1024) 0px 0px 0px;
+     
+//                          p {
+//                               font-size: var(--px-18-1024);
+     
+//                          }
+//                     }
+     
+//                     .wrapp__contacts {
+//                          width: var(--px-315-1024);
+//                          left: calc(50% - var(--px-157-1024));
+//                          margin: var(--px-80-1024) 0px 0px 0px;
+     
+//                          h3 {
+//                               font-size: var(--px-24-1024);
+//                               margin: 0px 0px var(--px-25-1024) 0px;
+//                          }
+     
+//                          span {
+//                               font-size: var(--px-18-1440);
+//                          }
+     
+//                          span:nth-child(3) {
+//                               margin: var(--px-15-1440) 0px;
+//                          }
+//                     }
+     
+//                     .wrapp__working-hours {
+//                          width: var(--px-315-1440);
+//                          left: calc(50% - var(--px-157-1440));
+//                          margin: var(--px-60-1440) 0px 0px 0px;
+     
+     
+//                          h3 {
+//                               font-size: var(--px-24-1440);
+//                               margin: 0px 0px var(--px-25-1440) 0px;
+//                          }
+     
+//                          span {
+//                               font-size: var(--px-18-1440);
+//                          }
+     
+//                          span:nth-child(3) {
+//                               margin: var(--px-15-1440) 0px;
+//                          }
+//                     }
+//                }
+     
+//      }
+
+//      .home-page__container {
+//           top: calc(var(--px-120-1440)* -1);
+//           margin: 0px 0px calc(var(--px-100-1440)* -1) 0px;
+
+          
+//      }
+
+     
+// }
+
+// @media screen and (max-width: 992px) {
+//      .header__container {
+
+//            .header-content {
+//                width: calc(var(--px-400-1440)* 1.8);
+//                margin: var(--px-30-1024) 0px 0px 0px;
+//                border-bottom: var(--px-1-1024) solid rgba($color: #FFF, $alpha: 0.5);
+     
+//                .instagram {
+//                     width: var(--px-26-1024);
+//                     height: var(--px-26-1024);
+//                     margin: 0px var(--px-110-1024) 0px 0px;
+     
+//                     .inst-size {
+//                          width: var(--px-24-1024);
+//                          height: var(--px-24-1024);
+//                     }
+//                }
+     
+     
+//                .menu {
+     
+     
+//                     .menu-list {
+//                          gap: var(--px-80-1024);
+     
+     
+//                          .menu-item {}
+     
+//                          .menu-link {
+//                               font-size: var(--px-18-1024);
+//                          }
+     
+     
+     
+//                          .menu-link:hover {
+//                               font-size: var(--px-18-1024);
+//                          }
+     
+//                          .menu-link:after {
+//                               content: "";
+//                               bottom: calc(var(--px-2-1024) * -1);
+//                               height: var(--px-1-1024);
+//                          }
+     
+//                     }
+     
+//                }
+     
+//                .wrapp-logo {
+     
+//                     margin: 0px var(--px-120-1024);
+     
+//                     a {
+//                          .img-size {
+//                               width: var(--px-60-1024);
+//                               height: var(--px-60-1024);
+//                               border-radius: 60px;
+//                          }
+//                     }
+//                }
+     
+//                .about-us__button {
+//                     margin: 0px 0px 0px var(--px-104-1024);
+     
+//                     .about-us__size {
+//                          width: var(--px-50-1024);
+//                          height: var(--px-20-1024);
+     
+//                     }
+//                }
+     
+//                .about-us__close {
+     
+//                     .close__size {
+//                          width: var(--px-32-1024);
+//                          height: var(--px-32-1024);
+//                     }
+     
+//                }
+     
+     
+     
+//                .about-us__inform {
+//                     width: calc(var(--px-400-1024)* 1.0875);
+//                     right: calc(var(--px-400-1024)* -2.21);
+//                     top: calc(var(--px-30-1024)* -1);
+     
+     
+//                     .wrapp__text {
+//                          width: var(--px-315-1024);
+//                          left: calc(50% - var(--px-157-1024));
+//                          margin: var(--px-246-1024) 0px 0px 0px;
+     
+//                          p {
+//                               font-size: var(--px-18-1024);
+     
+//                          }
+//                     }
+     
+//                     .wrapp__contacts {
+//                          width: var(--px-315-1024);
+//                          left: calc(50% - var(--px-157-1024));
+//                          margin: var(--px-80-1024) 0px 0px 0px;
+     
+//                          h3 {
+//                               font-size: var(--px-24-1024);
+//                               margin: 0px 0px var(--px-25-1024) 0px;
+//                          }
+     
+//                          span {
+//                               font-size: var(--px-18-1440);
+//                          }
+     
+//                          span:nth-child(3) {
+//                               margin: var(--px-15-1440) 0px;
+//                          }
+//                     }
+     
+//                     .wrapp__working-hours {
+//                          width: var(--px-315-1440);
+//                          left: calc(50% - var(--px-157-1440));
+//                          margin: var(--px-60-1440) 0px 0px 0px;
+     
+     
+//                          h3 {
+//                               font-size: var(--px-24-1440);
+//                               margin: 0px 0px var(--px-25-1440) 0px;
+//                          }
+     
+//                          span {
+//                               font-size: var(--px-18-1440);
+//                          }
+     
+//                          span:nth-child(3) {
+//                               margin: var(--px-15-1440) 0px;
+//                          }
+//                     }
+//                }
+     
+//           }
+
+          
+
+//      }
+
+//      .home-page__container {
+//           top: calc(var(--px-93-1440)* -1);
+//           margin: 0px 0px calc(var(--px-93-1440)* -1) 0px;
+
+//           .home-page__content {
+//                width: calc(var(--px-400-1440)* 3);
+
+//                .wpapp-title {
+//                     width: calc(var(--px-400-1440)* 2.4025);
+//                     top: calc(50vh - var(--px-100-1440));
+
+//                     h1 {
+//                          font-size: var(--px-72-1440);
+//                     }
+//                }
+
+//                .wrapp__mouse-down {
+//                     bottom: var(--px-100-1440);
+
+//                     .wrapp__svg {
+
+//                          svg {
+//                               width: var(--px-20-1440);
+//                               height: var(--px-30-1440);
+//                          }
+//                     }
+                    
+//                     .wpapp__paragraph {
+//                          margin: 0px 0px 0px var(--px-20-1440);
+
+//                          span{
+//                               font-size: var(--px-18-1440);
+//                          }
+//                     }    
+
+//                }
+//           }
+//      }
+
+//      .about-us__container {
+
+//           .about-us__content {
+//                width: calc(var(--px-400-1440)* 3);
+
+//                .wpapp__svg {
+//                     margin: var(--px-120-1440) 0px 0px 0px;
+
+
+//                     svg {
+//                          width: var(--px-80-1440);
+//                          height: var(--px-64-1440);
+//                     }
+//                }
+               
+//                .wrapp__inform {
+//                     width: calc(var(--px-400-1440)* 2.14) ;
+//                     margin: var(--px-60-1440) 0px var(--px-95-1440) 0px;
+
+//                     p {
+//                          font-size: var(--px-27-1440);
+//                     }
+//                     p:nth-child(1) {
+//                          margin: 0px 0px var(--px-27-1440) 0px;
+//                     }
+//                }
+//           }
+          
+//      }
+
+//      .our-story__container {
+
+//           .our-story__content {
+//                width: calc(var(--px-400-1440)* 3);
+
+//                .first-row {
+
+
+//                     .wrapp-img {
+//                          width: var(--px-400-1440);
+//                          height: var(--px-400-1440);
+//                          margin: var(--px-50-1440) 0px;
+
+//                          img {
+                              
+//                          }
+//                     }
+//                }
+
+//                .second-row {
+
+//                     .wrapp-paragraph {
+
+
+//                          .wrapp-title {
+//                               margin: 0px 0px var(--px-20-1440) 0px;
+
+//                               h2 {
+//                                    font-size: var(--px-40-1440);
+
+//                               }
+//                          }
+                         
+//                          .wrapp-text {
+
+//                               p {
+//                                    font-size: var(--px-18-1440);
+
+//                               }
+//                          }
+
+//                          .learn-more {
+//                               border: var(--px-1-1440) solid #000;
+//                               margin: var(--px-20-1440) 0px 0px 0px;
+//                               padding: var(--px-7-1440)var(--px-15-1440);
+
+//                               a {
+//                                    font-size: var(--px-20-1440);
+//                               }
+//                          }
+
+//                     }
+//                }
+//           }
+//      }
+
+//      .bestsellers__container {
+
+//           .bestsellers__content {
+//                width: calc(var(--px-400-1440) * 3);
+//                margin: 0px 0px var(--px-200-1440) 0px;
+
+
+//                .wrapp__title {
+//                     margin: var(--px-100-1440) 0px 0px 0px;
+
+
+//                     h3 {
+//                          font-size: var(--px-72-1440);
+
+//                     }
+//                }
+
+//                .wrapp__cards {
+//                     width: calc(var(--px-400-1440) * 3);
+//                     margin: var(--px-70-1440) 0px 0px 0px ;
+
+
+//                     .wrapp__card {
+//                          width: var(--px-350-1440);
+//                          height: calc(var(--px-400-1440)* 1.125);
+
+
+//                          img {
+//                               width: var(--px-350-1440);
+//                               height: calc(var(--px-400-1440)* 1.125);
+
+//                          }
+
+//                          .wrapp__text {
+//                               margin: var(--px-20-1440) 0px 0px 0px;
+
+
+//                               .product-name {
+//                                    font-size: var(--px-30-1440);
+//                               }
+
+//                               .product-price {
+//                                    font-size: var(--px-24-1440);
+//                               }
+//                          }
+                         
+//                     }
+//                }
+//           }
+//      }
+
+//      .popular-goods__container {
+
+//           .popular-goods__content {
+//                width: calc(var(--px-400-1440)* 3);
+//                border-top: var(--px-2-1440) solid #CDAA7D;
+
+//                .wrapp-title {
+//                     margin: var(--px-100-1440);
+
+//                     h3 {
+//                          font-size: var(--px-48-1440);
+//                     }
+//                }
+
+//                .wrapp__product {
+//                     height: calc(var(--px-400-1440)* 1.25);
+//                     margin: var(--px-30-1440) 0px;
+
+//                     .first-row {
+
+//                          .photo {
+//                               width: var(--px-400-1440);
+//                               height: var(--px-400-1440);
+
+                              
+//                          }
+
+                    
+//                     }
+
+
+//                     .second-row {
+//                          height: var(--px-400-1440);
+
+//                          .wrapp__paragraph {
+//                               gap: var(--px-20-1440);
+
+
+//                               h2 {
+//                                    font-family: 'Garamond', serif;
+//                                    font-size: var(--px-28-1440);
+//                               }
+
+//                               p {
+//                                    font-size: var(--px-22-1440);
+//                               }
+
+//                               .wrapp__button {
+                              
+
+//                                    .go__store {
+//                                         padding: var(--px-9-1440) var(--px-15-1440);
+//                                         border: var(--px-1-1440) solid #CDAA7D;
+                                   
+//                                              a {
+//                                                   font-size: var(--px-22-1440);
+
+//                                              }
+//                                    }
+//                               }
+//                          }
+
+//                          .background-line {
+//                               top: calc(var(--px-400-1440)* 1.05);
+//                               right: var(--px-150-1440);
+//                               width: calc(var(--px-400-1440) * 2);
+//                               height: var(--px-1-1440);
+//                          }
+
+                         
+//                     }
+                    
+                         
+//                }
+
+//                .wrapp__product-right {
+//                     height: calc(var(--px-400-1440)* 1.25);
+//                     margin: var(--px-30-1440) 0px;
+
+//                     .first-row {
+//                          height: var(--px-400-1440);
+
+//                          .wrapp__paragraph {
+//                               gap: var(--px-20-1440);
+
+
+//                               h2 {
+//                                    font-size: var(--px-24-1440);
+//                               }
+
+//                               p {
+//                                    font-size: var(--px-18-1440);
+//                               }
+
+//                               .wrapp__button {
+//                                    margin: var(--px-10-1440) 0px 0px 0px;
+                              
+
+//                                    .go__store {
+//                                         padding: var(--px-9-1440) var(--px-15-1440);
+//                                         border: var(--px-1-1440) solid #CDAA7D;
+                                   
+//                                              a {
+//                                                   font-size: var(--px-22-1440);
+
+//                                              }
+//                                    }
+//                               }
+//                          }
+
+//                          .background-line {
+//                               top: calc(var(--px-350-1440)* 1.05);
+//                               left: var(--px-150-1440);
+//                               width: calc(var(--px-400-1440) * 2);
+//                               height: var(--px-1-1440);
+//                          }
+//                     }
+
+//                     .second-row {
+                    
+//                               .photo {
+//                                    width: var(--px-400-1440);
+//                                    height: var(--px-400-1440);
+
+//                               }
+
+
+                              
+//                          }
+//                }
+
+//                .wrapp__beauty-hair {
+//                     border-top: var(--px-2-1440) solid #CDAA7D;
+
+
+//                     .wrapp-title {
+//                          margin: var(--px-100-1440);
+
+//                          h3 {
+//                               font-size: var(--px-48-1440);
+//                               border-bottom: var(--px-2-1440) solid #CDAA7D;
+//                          }
+//                     }
+
+//                     .wrapp__product {
+//                          height: calc(var(--px-400-1440)* 1.25);
+//                          margin: var(--px-30-1440) 0px;
+
+//                          .first-row {
+
+//                               .photo {
+//                                    width: var(--px-400-1440);
+//                                    height: var(--px-400-1440);
+//                               }
+
+                         
+//                          }
+
+
+//                          .second-row {
+//                               height: var(--px-400-1440);
+
+//                               .wrapp__paragraph {
+//                                    gap: var(--px-20-1440);
+
+
+//                                    h2 {
+//                                         font-size: var(--px-24-1440);
+//                                    }
+
+//                                    p {
+//                                         font-size: var(--px-18-1440);
+//                                    }
+
+                                   
+
+                                   
+//                               }
+
+//                               .background-line {
+//                                    top: calc(var(--px-400-1440)* 1.05);
+//                                    right: var(--px-150-1440);
+//                                    width: calc(var(--px-400-1440) * 2);
+//                                    height: var(--px-1-1440);
+//                               }
+
+                              
+//                          }
+                         
+                              
+//                     }
+
+//                     .wrapp__product-right {
+//                          height: calc(var(--px-400-1440)* 1.25);
+//                          margin: var(--px-30-1440) 0px;
+
+//                          .first-row {
+//                               height: var(--px-400-1440);
+
+//                               .wrapp__paragraph {
+//                                    gap: var(--px-20-1440);
+
+
+//                                    h2 {
+//                                         font-size: var(--px-24-1440);
+//                                    }
+
+//                                    p {
+//                                         font-size: var(--px-18-1440);
+//                                    }
+
+//                                    .wrapp__button {
+                              
+
+//                                         .go__store {
+//                                              padding: var(--px-9-1440) var(--px-15-1440);
+//                                              border: var(--px-1-1440) solid #CDAA7D;
+                                        
+//                                              a {
+//                                                   font-size: var(--px-22-1440);
+
+//                                              }
+//                                         }
+//                                    }
+//                               }
+
+//                               .background-line {
+//                                    top: calc(var(--px-350-1440)* 1.05);
+//                                    left: var(--px-150-1440);
+//                                    width: calc(var(--px-400-1440) * 2);
+//                                    height: var(--px-1-1440);
+//                               }
+//                          }
+
+//                          .second-row {
+                         
+//                               .photo {
+//                                    width: var(--px-400-1440);
+//                                    height: var(--px-400-1440);
+
+//                               }
+
+//                          }
+//                     }
+//                }
+                    
+//           }
+          
+               
+//      }
+
+//      .footer__container {
+
+//           .footer__content {
+//                width: calc(var(--px-400-1440) * 3);
+//                border-top: var(--px-2-1440) solid #CDAA7D;
+//                padding: var(--px-100-1440) 0px 0px 0px;
+//                margin: 0px 0px var(--px-100-1440) 0px;
+
+
+//                .first-block {
+
+
+
+//                     .first__row {
+
+//                          .wrapp-logo {
+
+
+//                               img {
+//                                    width: var(--px-120-1440);
+//                                    height: var(--px-120-1440);
+
+//                               }
+//                          }
+
+//                          .wrapp__slogan {
+
+
+//                               span {
+//                                         font-size: var(--px-24-1440);
+
+//                               }
+//                          }
+//                     }
+
+//                     .second__row {
+//                          margin: var(--px-60-1440) 0px var(--px-30-1440) 0px ;
+
+//                          .menu {
+
+
+//                               .menu-list {
+//                                    gap: var(--px-5-1440);
+
+
+//                                    .menu-item {
+//                                    }
+                                   
+//                                    .menu-link {
+//                                         font-size: var(--px-20-1440);
+//                                    }
+
+//                                    .menu-link:hover {
+//                                    }
+
+//                                    .menu-link:after {
+//                                         content: "";
+//                                         bottom:calc(var(--px-2-1440) * -1);
+//                                         height: var(--px-1-1440);
+//                                    }
+
+//                               }
+//                          }
+//                     }
+
+//                     .third__row {
+//                          margin: var(--px-60-1440);
+
+//                          .wrapp__contacts{
+//                               width: var(--px-315-1440);
+                         
+//                               h3 {
+//                                    font-size: var(--px-24-1440);
+//                                    margin: 0px 0px var(--px-15-1440) 0px;
+//                               }
+                         
+//                               span {
+//                                    font-size: var(--px-22-1440);
+//                               }
+
+                         
+//                               span:nth-child(3) {
+//                                    margin: var(--px-10-1440) 0px;
+//                               }
+
+//                          }
+                    
+
+//                     }
+
+//                     .fourth__row {
+//                          margin: var(--px-60-1440) 0px 0px 0px;
+
+//                          .wrapp__working-hours {
+//                               width: var(--px-315-1440);
+                         
+                         
+//                               h3 {
+//                                    font-size: var(--px-24-1440);
+//                                    margin: 0px 0px var(--px-25-1440) 0px;
+//                               }
+
+                         
+//                               span {
+//                                    font-size: var(--px-18-1440);
+//                               }
+                         
+//                               span:nth-child(3) {
+//                                    margin: var(--px-15-1440) 0px;
+//                               }
+//                          }
+//                     }    
+                    
+//                }
+
+//                .second-block {
+//                     color: #FFF;
+
+
+//                     .wrapp__social {
+
+
+//                          .wrapp__facebook {}
+
+//                          .wrapp__tiktok {}
+
+//                          .wrapp__instagram {}
+
+//                          .wrapp__telegram {}
+
+//                          .wrapp__whatsapp {}
+
+//                     }
+//                }
+//           }
+//      }
+// }
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 628px) {}
+
+@media screen and (max-width: 426px) {}
+
+@media screen and (max-width: 376px) {}
+
+@media screen and (max-width: 320px) {}
 
 
 

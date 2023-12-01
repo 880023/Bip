@@ -100,7 +100,6 @@ section {
 
 body {
   line-height: 1;
-  font-family: "Open Sans", sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -137,10 +136,9 @@ a {
 }
 
 .wrapp-page {
-  width: 100vw;
   background-color: #111111;
-  z-index: -1;
-  overflow-y: hidden;
+  overflow: hidden;
+  position: relative;
 }
 
 .header__container {
@@ -149,6 +147,7 @@ a {
   justify-content: center;
   align-items: center;
   background: transparent;
+  position: absolute;
   z-index: 2;
 }
 .header__container .header-content {
@@ -180,8 +179,9 @@ a {
   align-items: center;
 }
 .header__container .header-content .menu .menu-list {
-  display: inline-flex;
+  display: flex;
   align-items: flex-start;
+  justify-content: space-around;
   gap: var(--px-80-1920);
 }
 .header__container .header-content .menu .menu-list .menu-link {
@@ -325,6 +325,7 @@ a {
   width: calc(var(--px-400-1920) * 1.0875);
   height: 104vh;
   display: flex;
+  align-items: end;
   flex-shrink: 0;
   flex-wrap: wrap;
   position: absolute;
@@ -333,6 +334,12 @@ a {
   background: #111;
   transition: 0.35s;
   z-index: 3;
+}
+.header__container .about-us__inform .burger__wrapp-logo {
+  display: none;
+}
+.header__container .about-us__inform .burger__menu {
+  display: none;
 }
 .header__container .about-us__inform .wrapp__text {
   width: var(--px-315-1920);
@@ -385,6 +392,7 @@ a {
   width: var(--px-315-1920);
   position: relative;
   left: calc(50% - var(--px-157-1920));
+  margin: var(--px-30-1920) 0px var(--px-50-1920) 0px;
 }
 .header__container .about-us__inform .wrapp__working-hours h3 {
   width: 100%;
@@ -414,7 +422,6 @@ a {
 .home-page__container {
   height: 100vh;
   position: relative;
-  top: calc(var(--px-93-1920) * -1);
   z-index: 1;
   display: flex;
   justify-content: center;
@@ -423,7 +430,6 @@ a {
   background-size: 1920px 1080px;
   background-repeat: no-repeat;
   background-position: center;
-  margin: 0px 0px calc(var(--px-93-1920) * -1) 0px;
 }
 .home-page__container .home-page__content {
   width: calc(var(--px-400-1920) * 3);
@@ -1258,5 +1264,1255 @@ a {
   }
   .our-story__conteiner .our-story__content {
     width: calc(var(--px-400-2560) * 3.6);
+  }
+}
+@media screen and (max-width: 1440px) {
+  .header__container .header-content {
+    width: calc(var(--px-400-1440) * 3);
+    margin: var(--px-30-1440) 0px 0px 0px;
+    border-bottom: var(--px-1-1440) solid rgba(255, 255, 255, 0.5);
+  }
+  .header__container .header-content .instagram {
+    width: var(--px-26-1440);
+    height: var(--px-26-1440);
+    margin: 0px var(--px-110-1440) 0px 0px;
+  }
+  .header__container .header-content .instagram .inst-size {
+    width: var(--px-24-1440);
+    height: var(--px-24-1440);
+  }
+  .header__container .header-content .menu .menu-list {
+    gap: var(--px-80-1440);
+  }
+  .header__container .header-content .menu .menu-list .menu-link {
+    font-size: var(--px-18-1440);
+  }
+  .header__container .header-content .menu .menu-list .menu-link:hover {
+    font-size: var(--px-18-1440);
+  }
+  .header__container .header-content .menu .menu-list .menu-link:after {
+    content: "";
+    bottom: calc(var(--px-2-1440) * -1);
+    height: var(--px-1-1440);
+  }
+  .header__container .header-content .wrapp-logo {
+    margin: 0px var(--px-120-1440);
+  }
+  .header__container .header-content .wrapp-logo a .img-size {
+    width: var(--px-60-1440);
+    height: var(--px-60-1440);
+    border-radius: 60px;
+  }
+  .header__container .header-content .about-us__button {
+    margin: 0px 0px 0px var(--px-104-1440);
+  }
+  .header__container .header-content .about-us__button .about-us__size {
+    width: var(--px-50-1440);
+    height: var(--px-20-1440);
+  }
+  .header__container .about-us__close {
+    top: var(--px-45-1920);
+    right: var(--px-360-1920);
+  }
+  .header__container .about-us__close .close__size {
+    width: var(--px-32-1440);
+    height: var(--px-32-1440);
+  }
+  .header__container .about-us__inform {
+    width: calc(var(--px-400-1920) * 1.0875);
+    right: calc(var(--px-400-1920) * -1.0875);
+    top: calc(var(--px-30-1920) * -1);
+  }
+  .header__container .about-us__inform .wrapp__text {
+    width: var(--px-315-1920);
+    margin: var(--px-150-1920) 0px 0px 0px;
+  }
+  .header__container .about-us__inform .wrapp__text p {
+    font-size: var(--px-18-1440);
+  }
+  .header__container .about-us__inform .wrapp__contacts {
+    width: var(--px-315-1920);
+    left: calc(50% - var(--px-157-1920));
+    margin: var(--px-80-1920) 0px 0px 0px;
+  }
+  .header__container .about-us__inform .wrapp__contacts h3 {
+    font-size: var(--px-24-1440);
+    margin: 0px 0px var(--px-25-1440) 0px;
+  }
+  .header__container .about-us__inform .wrapp__contacts p {
+    font-size: var(--px-18-1440);
+  }
+  .header__container .about-us__inform .wrapp__contacts p:nth-child(3) {
+    margin: var(--px-10-1440) 0px;
+  }
+  .header__container .about-us__inform .wrapp__working-hours {
+    width: var(--px-315-1920);
+    left: calc(50% - var(--px-157-1920));
+  }
+  .header__container .about-us__inform .wrapp__working-hours h3 {
+    font-size: var(--px-24-1440);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    margin: 0px 0px var(--px-15-1440) 0px;
+  }
+  .header__container .about-us__inform .wrapp__working-hours p {
+    font-size: var(--px-18-1440);
+  }
+  .header__container .about-us__inform .wrapp__working-hours p:nth-child(3) {
+    margin: var(--px-10-1440) 0px;
+  }
+  .home-page__container .home-page__content {
+    width: calc(var(--px-400-1440) * 3);
+  }
+  .home-page__container .home-page__content .wpapp-title {
+    width: calc(var(--px-400-1440) * 2.4025);
+    top: calc(50vh - var(--px-100-1440));
+  }
+  .home-page__container .home-page__content .wpapp-title h1 {
+    font-size: var(--px-72-1440);
+  }
+  .home-page__container .home-page__content .wrapp__mouse-down {
+    bottom: var(--px-100-1440);
+  }
+  .home-page__container .home-page__content .wrapp__mouse-down .wrapp__svg svg {
+    width: var(--px-20-1440);
+    height: var(--px-30-1440);
+  }
+  .home-page__container .home-page__content .wrapp__mouse-down .wpapp__paragraph {
+    margin: 0px 0px 0px var(--px-20-1440);
+  }
+  .home-page__container .home-page__content .wrapp__mouse-down .wpapp__paragraph span {
+    font-size: var(--px-18-1440);
+  }
+  .about-us__container .about-us__content {
+    width: calc(var(--px-400-1440) * 3);
+  }
+  .about-us__container .about-us__content .wpapp__svg {
+    margin: var(--px-120-1440) 0px 0px 0px;
+  }
+  .about-us__container .about-us__content .wpapp__svg svg {
+    width: var(--px-80-1440);
+    height: var(--px-64-1440);
+  }
+  .about-us__container .about-us__content .wrapp__inform {
+    width: calc(var(--px-400-1440) * 2.14);
+    margin: var(--px-60-1440) 0px var(--px-95-1440) 0px;
+  }
+  .about-us__container .about-us__content .wrapp__inform p {
+    font-size: var(--px-27-1440);
+  }
+  .about-us__container .about-us__content .wrapp__inform p:nth-child(1) {
+    margin: 0px 0px var(--px-27-1440) 0px;
+  }
+  .our-story__container .our-story__content {
+    width: calc(var(--px-400-1440) * 3);
+  }
+  .our-story__container .our-story__content .first-row .wrapp-img {
+    width: var(--px-400-1440);
+    height: var(--px-400-1440);
+    margin: var(--px-50-1440) 0px;
+  }
+  .our-story__container .our-story__content .second-row .wrapp-paragraph .wrapp-title {
+    margin: 0px 0px var(--px-20-1440) 0px;
+  }
+  .our-story__container .our-story__content .second-row .wrapp-paragraph .wrapp-title h2 {
+    font-size: var(--px-40-1440);
+  }
+  .our-story__container .our-story__content .second-row .wrapp-paragraph .wrapp-text p {
+    font-size: var(--px-18-1440);
+  }
+  .our-story__container .our-story__content .second-row .wrapp-paragraph .learn-more {
+    border: var(--px-1-1440) solid #000;
+    margin: var(--px-20-1440) 0px 0px 0px;
+    padding: var(--px-7-1440) var(--px-15-1440);
+  }
+  .our-story__container .our-story__content .second-row .wrapp-paragraph .learn-more a {
+    font-size: var(--px-20-1440);
+  }
+  .bestsellers__container .bestsellers__content {
+    width: calc(var(--px-400-1440) * 3);
+    margin: 0px 0px var(--px-200-1440) 0px;
+  }
+  .bestsellers__container .bestsellers__content .wrapp__title {
+    margin: var(--px-100-1440) 0px 0px 0px;
+  }
+  .bestsellers__container .bestsellers__content .wrapp__title h3 {
+    font-size: var(--px-72-1440);
+  }
+  .bestsellers__container .bestsellers__content .wrapp__cards {
+    width: calc(var(--px-400-1440) * 3);
+    margin: var(--px-70-1440) 0px 0px 0px;
+  }
+  .bestsellers__container .bestsellers__content .wrapp__cards .wrapp__card {
+    width: var(--px-350-1440);
+    height: calc(var(--px-400-1440) * 1.125);
+  }
+  .bestsellers__container .bestsellers__content .wrapp__cards .wrapp__card img {
+    width: var(--px-350-1440);
+    height: calc(var(--px-400-1440) * 1.125);
+  }
+  .bestsellers__container .bestsellers__content .wrapp__cards .wrapp__card .wrapp__text {
+    margin: var(--px-20-1440) 0px 0px 0px;
+  }
+  .bestsellers__container .bestsellers__content .wrapp__cards .wrapp__card .wrapp__text .product-name {
+    font-size: var(--px-30-1440);
+  }
+  .bestsellers__container .bestsellers__content .wrapp__cards .wrapp__card .wrapp__text .product-price {
+    font-size: var(--px-24-1440);
+  }
+  .popular-goods__container .popular-goods__content {
+    width: calc(var(--px-400-1440) * 3);
+    border-top: var(--px-2-1440) solid #CDAA7D;
+  }
+  .popular-goods__container .popular-goods__content .wrapp-title {
+    margin: var(--px-100-1440);
+  }
+  .popular-goods__container .popular-goods__content .wrapp-title h3 {
+    font-size: var(--px-48-1440);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product {
+    height: calc(var(--px-400-1440) * 1.25);
+    margin: var(--px-30-1440) 0px;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product .first-row .photo {
+    width: var(--px-400-1440);
+    height: var(--px-400-1440);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product .second-row {
+    height: var(--px-400-1440);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product .second-row .wrapp__paragraph {
+    gap: var(--px-20-1440);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product .second-row .wrapp__paragraph h2 {
+    font-family: "Garamond", serif;
+    font-size: var(--px-28-1440);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product .second-row .wrapp__paragraph p {
+    font-size: var(--px-22-1440);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product .second-row .wrapp__paragraph .wrapp__button .go__store {
+    padding: var(--px-9-1440) var(--px-15-1440);
+    border: var(--px-1-1440) solid #CDAA7D;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product .second-row .wrapp__paragraph .wrapp__button .go__store a {
+    font-size: var(--px-22-1440);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product .second-row .background-line {
+    top: calc(var(--px-400-1440) * 1.05);
+    right: var(--px-150-1440);
+    width: calc(var(--px-400-1440) * 2);
+    height: var(--px-1-1440);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product-right {
+    height: calc(var(--px-400-1440) * 1.25);
+    margin: var(--px-30-1440) 0px;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product-right .first-row {
+    height: var(--px-400-1440);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product-right .first-row .wrapp__paragraph {
+    gap: var(--px-20-1440);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product-right .first-row .wrapp__paragraph h2 {
+    font-size: var(--px-24-1440);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product-right .first-row .wrapp__paragraph p {
+    font-size: var(--px-18-1440);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product-right .first-row .wrapp__paragraph .wrapp__button {
+    margin: var(--px-10-1440) 0px 0px 0px;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product-right .first-row .wrapp__paragraph .wrapp__button .go__store {
+    padding: var(--px-9-1440) var(--px-15-1440);
+    border: var(--px-1-1440) solid #CDAA7D;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product-right .first-row .wrapp__paragraph .wrapp__button .go__store a {
+    font-size: var(--px-22-1440);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product-right .first-row .background-line {
+    top: calc(var(--px-350-1440) * 1.05);
+    left: var(--px-150-1440);
+    width: calc(var(--px-400-1440) * 2);
+    height: var(--px-1-1440);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product-right .second-row .photo {
+    width: var(--px-400-1440);
+    height: var(--px-400-1440);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair {
+    border-top: var(--px-2-1440) solid #CDAA7D;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp-title {
+    margin: var(--px-100-1440);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp-title h3 {
+    font-size: var(--px-48-1440);
+    border-bottom: var(--px-2-1440) solid #CDAA7D;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product {
+    height: calc(var(--px-400-1440) * 1.25);
+    margin: var(--px-30-1440) 0px;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product .first-row .photo {
+    width: var(--px-400-1440);
+    height: var(--px-400-1440);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product .second-row {
+    height: var(--px-400-1440);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product .second-row .wrapp__paragraph {
+    gap: var(--px-20-1440);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product .second-row .wrapp__paragraph h2 {
+    font-size: var(--px-24-1440);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product .second-row .wrapp__paragraph p {
+    font-size: var(--px-18-1440);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product .second-row .background-line {
+    top: calc(var(--px-400-1440) * 1.05);
+    right: var(--px-150-1440);
+    width: calc(var(--px-400-1440) * 2);
+    height: var(--px-1-1440);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right {
+    height: calc(var(--px-400-1440) * 1.25);
+    margin: var(--px-30-1440) 0px;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .first-row {
+    height: var(--px-400-1440);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .first-row .wrapp__paragraph {
+    gap: var(--px-20-1440);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .first-row .wrapp__paragraph h2 {
+    font-size: var(--px-24-1440);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .first-row .wrapp__paragraph p {
+    font-size: var(--px-18-1440);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .first-row .wrapp__paragraph .wrapp__button .go__store {
+    padding: var(--px-9-1440) var(--px-15-1440);
+    border: var(--px-1-1440) solid #CDAA7D;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .first-row .wrapp__paragraph .wrapp__button .go__store a {
+    font-size: var(--px-22-1440);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .first-row .background-line {
+    top: calc(var(--px-350-1440) * 1.05);
+    left: var(--px-150-1440);
+    width: calc(var(--px-400-1440) * 2);
+    height: var(--px-1-1440);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .second-row .photo {
+    width: var(--px-400-1440);
+    height: var(--px-400-1440);
+  }
+  .footer__container .footer__content {
+    width: calc(var(--px-400-1440) * 3);
+    border-top: var(--px-2-1440) solid #CDAA7D;
+    padding: var(--px-100-1440) 0px 0px 0px;
+    margin: 0px 0px var(--px-100-1440) 0px;
+  }
+  .footer__container .footer__content .first-block .first__row .wrapp-logo img {
+    width: var(--px-120-1440);
+    height: var(--px-120-1440);
+  }
+  .footer__container .footer__content .first-block .first__row .wrapp__slogan span {
+    font-size: var(--px-24-1440);
+  }
+  .footer__container .footer__content .first-block .second__row {
+    margin: var(--px-60-1440) 0px var(--px-30-1440) 0px;
+  }
+  .footer__container .footer__content .first-block .second__row .menu .menu-list {
+    gap: var(--px-5-1440);
+  }
+  .footer__container .footer__content .first-block .second__row .menu .menu-list .menu-link {
+    font-size: var(--px-20-1440);
+  }
+  .footer__container .footer__content .first-block .second__row .menu .menu-list .menu-link:after {
+    content: "";
+    bottom: calc(var(--px-2-1440) * -1);
+    height: var(--px-1-1440);
+  }
+  .footer__container .footer__content .first-block .third__row {
+    margin: var(--px-60-1440);
+  }
+  .footer__container .footer__content .first-block .third__row .wrapp__contacts {
+    width: var(--px-315-1440);
+  }
+  .footer__container .footer__content .first-block .third__row .wrapp__contacts h3 {
+    font-size: var(--px-24-1440);
+    margin: 0px 0px var(--px-15-1440) 0px;
+  }
+  .footer__container .footer__content .first-block .third__row .wrapp__contacts span {
+    font-size: var(--px-22-1440);
+  }
+  .footer__container .footer__content .first-block .third__row .wrapp__contacts span:nth-child(3) {
+    margin: var(--px-10-1440) 0px;
+  }
+  .footer__container .footer__content .first-block .fourth__row {
+    margin: var(--px-60-1440) 0px 0px 0px;
+  }
+  .footer__container .footer__content .first-block .fourth__row .wrapp__working-hours {
+    width: var(--px-315-1440);
+  }
+  .footer__container .footer__content .first-block .fourth__row .wrapp__working-hours h3 {
+    font-size: var(--px-24-1440);
+    margin: 0px 0px var(--px-25-1440) 0px;
+  }
+  .footer__container .footer__content .first-block .fourth__row .wrapp__working-hours span {
+    font-size: var(--px-18-1440);
+  }
+  .footer__container .footer__content .first-block .fourth__row .wrapp__working-hours span:nth-child(3) {
+    margin: var(--px-15-1440) 0px;
+  }
+  .footer__container .footer__content .second-block {
+    color: #FFF;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .header__container .header-content {
+    width: calc(var(--px-400-1024) * 2.1);
+    margin: var(--px-30-1024) 0px 0px 0px;
+    border-bottom: var(--px-1-1024) solid rgba(255, 255, 255, 0.5);
+    margin: 0px 0px 0px var(--px-40-1920);
+  }
+  .header__container .header-content .instagram {
+    width: var(--px-26-1024);
+    height: var(--px-26-1024);
+    margin: 0px var(--px-50-1024) 0px 0px;
+  }
+  .header__container .header-content .instagram .inst-size {
+    width: var(--px-24-1024);
+    height: var(--px-24-1024);
+  }
+  .header__container .header-content .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header__container .header-content .menu .menu-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: var(--px-40-1024);
+  }
+  .header__container .header-content .menu .menu-list .menu-link {
+    position: relative;
+    color: #FFF;
+    font-size: var(--px-18-1024);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+    cursor: pointer;
+  }
+  .header__container .header-content .menu .menu-list .menu-link:hover {
+    color: #CDAA7D;
+    font-size: var(--px-18-1024);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+  }
+  .header__container .header-content .menu .menu-list .menu-link:after {
+    content: "";
+    bottom: calc(var(--px-2-1024) * -1);
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: var(--px-1-1024);
+    background-color: #CDAA7D;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
+  .header__container .header-content .menu .menu-list .menu-link:hover::after {
+    width: 100%;
+    left: 0px;
+  }
+  .header__container .header-content .wrapp-logo {
+    margin: 0px var(--px-60-1024);
+  }
+  .header__container .header-content .wrapp-logo a .img-size {
+    width: var(--px-60-1024);
+    height: var(--px-60-1024);
+    border-radius: 60px;
+  }
+  .header__container .header-content .about-us__button {
+    margin: 0px 0px 0px var(--px-50-1024);
+  }
+  .header__container .header-content .about-us__button .about-us__size {
+    width: var(--px-50-1024);
+    height: var(--px-20-1024);
+  }
+}
+@media screen and (max-width: 992px) {
+  .header__container .header-content {
+    width: calc(var(--px-400-1024) * 1.5);
+    margin: var(--px-30-1024) 0px 0px 0px;
+    border-bottom: var(--px-1-1024) solid rgba(255, 255, 255, 0.5);
+    margin: 0px 0px 0px var(--px-40-1920);
+  }
+  .header__container .header-content .instagram {
+    width: var(--px-26-1024);
+    height: var(--px-26-1024);
+    margin: 0px var(--px-35-1024) 0px 0px;
+  }
+  .header__container .header-content .instagram .inst-size {
+    width: var(--px-24-1024);
+    height: var(--px-24-1024);
+  }
+  .header__container .header-content .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header__container .header-content .menu .menu-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: var(--px-35-1024);
+  }
+  .header__container .header-content .menu .menu-list .menu-link {
+    position: relative;
+    color: #FFF;
+    font-size: var(--px-18-1024);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+    cursor: pointer;
+  }
+  .header__container .header-content .menu .menu-list .menu-link:hover {
+    color: #CDAA7D;
+    font-size: var(--px-18-1024);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+  }
+  .header__container .header-content .menu .menu-list .menu-link:after {
+    content: "";
+    bottom: calc(var(--px-2-1024) * -1);
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: var(--px-1-1024);
+    background-color: #CDAA7D;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
+  .header__container .header-content .menu .menu-list .menu-link:hover::after {
+    width: 100%;
+    left: 0px;
+  }
+  .header__container .header-content .wrapp-logo {
+    margin: 0px var(--px-10-1024);
+  }
+  .header__container .header-content .wrapp-logo a .img-size {
+    width: var(--px-60-1024);
+    height: var(--px-60-1024);
+    border-radius: 60px;
+  }
+  .header__container .header-content .about-us__button {
+    margin: 0px 0px 0px var(--px-15-1024);
+  }
+  .header__container .header-content .about-us__button .about-us__size {
+    width: var(--px-50-1024);
+    height: var(--px-20-1024);
+  }
+  .header__container .about-us__close {
+    top: var(--px-45-1920);
+    right: var(--px-360-1920);
+  }
+  .header__container .about-us__close .close__size {
+    width: var(--px-32-1024);
+    height: var(--px-32-1024);
+  }
+  .header__container .about-us__inform {
+    width: calc(var(--px-400-1920) * 1.0875);
+    right: calc(var(--px-400-1920) * -1.0875);
+    top: calc(var(--px-30-1920) * -1);
+  }
+  .header__container .about-us__inform .wrapp__text {
+    width: var(--px-315-1920);
+    margin: var(--px-150-1920) 0px 0px 0px;
+  }
+  .header__container .about-us__inform .wrapp__text p {
+    font-size: var(--px-18-1024);
+  }
+  .header__container .about-us__inform .wrapp__contacts {
+    width: var(--px-315-1920);
+    left: calc(50% - var(--px-157-1920));
+    margin: var(--px-80-1920) 0px 0px 0px;
+  }
+  .header__container .about-us__inform .wrapp__contacts h3 {
+    font-size: var(--px-24-1024);
+    margin: 0px 0px var(--px-25-1024) 0px;
+  }
+  .header__container .about-us__inform .wrapp__contacts p {
+    font-size: var(--px-18-1024);
+  }
+  .header__container .about-us__inform .wrapp__contacts p:nth-child(3) {
+    margin: var(--px-10-1024) 0px;
+  }
+  .header__container .about-us__inform .wrapp__working-hours {
+    width: var(--px-315-1920);
+    left: calc(50% - var(--px-157-1920));
+  }
+  .header__container .about-us__inform .wrapp__working-hours h3 {
+    font-size: var(--px-24-1024);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    margin: 0px 0px var(--px-15-1024) 0px;
+  }
+  .header__container .about-us__inform .wrapp__working-hours p {
+    font-size: var(--px-18-1024);
+  }
+  .header__container .about-us__inform .wrapp__working-hours p:nth-child(3) {
+    margin: var(--px-10-1024) 0px;
+  }
+  .bestsellers__container .bestsellers__content {
+    flex-wrap: wrap;
+    width: calc(var(--px-400-1440) * 3);
+    margin: 0px 0px var(--px-200-1440) 0px;
+  }
+  .bestsellers__container .bestsellers__content .wrapp__title {
+    margin: var(--px-100-1440) 0px 0px 0px;
+  }
+  .bestsellers__container .bestsellers__content .wrapp__title h3 {
+    font-size: var(--px-72-1440);
+  }
+  .bestsellers__container .bestsellers__content .wrapp__cards {
+    flex-wrap: wrap;
+    width: calc(var(--px-400-1440) * 3);
+    margin: var(--px-70-1440) 0px 0px 0px;
+  }
+  .bestsellers__container .bestsellers__content .wrapp__cards .wrapp__card {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 100vw;
+    height: calc(var(--px-400-1024) * 1.5);
+    margin-bottom: var(--px-50-1024);
+  }
+  .bestsellers__container .bestsellers__content .wrapp__cards .wrapp__card img {
+    width: var(--px-400-1024);
+    height: calc(var(--px-400-1024) * 1.3);
+  }
+  .bestsellers__container .bestsellers__content .wrapp__cards .wrapp__card .wrapp__text {
+    width: 100%;
+    margin: var(--px-20-1024) 0px 0px 0px;
+  }
+  .bestsellers__container .bestsellers__content .wrapp__cards .wrapp__card .wrapp__text .product-name {
+    font-size: var(--px-30-1024);
+  }
+  .bestsellers__container .bestsellers__content .wrapp__cards .wrapp__card .wrapp__text .product-price {
+    font-size: var(--px-24-1024);
+  }
+  .popular-goods__container .popular-goods__content {
+    width: calc(var(--px-400-1024) * 3);
+    border-top: var(--px-2-1024) solid #CDAA7D;
+  }
+  .popular-goods__container .popular-goods__content .wrapp-title {
+    margin: var(--px-100-1024);
+  }
+  .popular-goods__container .popular-goods__content .wrapp-title h3 {
+    font-size: var(--px-48-1024);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    margin: var(--px-30-1024) 0px;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product .first-row {
+    width: 100%;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product .first-row .photo {
+    width: var(--px-400-1024);
+    height: var(--px-400-1024);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product .second-row {
+    width: 70%;
+    height: 100%;
+    margin: var(--px-40-1024) 0px;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product .second-row .wrapp__paragraph {
+    margin: 20px 0px 0px 0px;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product .second-row .wrapp__paragraph h2 {
+    font-family: "Garamond", serif;
+    font-size: var(--px-28-1024);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product .second-row .wrapp__paragraph p {
+    font-size: var(--px-22-1024);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product .second-row .wrapp__paragraph .wrapp__button .go__store {
+    padding: var(--px-9-1024) var(--px-15-1024);
+    border: var(--px-1-1024) solid #CDAA7D;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product .second-row .wrapp__paragraph .wrapp__button .go__store a {
+    font-size: var(--px-22-1024);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product .second-row .background-line {
+    display: none;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product-right {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    margin: var(--px-30-1024) 0px;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product-right .first-row {
+    order: 2;
+    width: 70%;
+    height: 100%;
+    margin: var(--px-40-1024) 0px;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product-right .first-row .wrapp__paragraph {
+    gap: var(--px-20-1024);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product-right .first-row .wrapp__paragraph h2 {
+    text-align: start;
+    font-size: var(--px-24-1024);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product-right .first-row .wrapp__paragraph p {
+    text-align: start;
+    font-size: var(--px-18-1024);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product-right .first-row .wrapp__paragraph .wrapp__button {
+    justify-content: end;
+    margin: var(--px-10-1024) 0px 0px 0px;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product-right .first-row .wrapp__paragraph .wrapp__button .go__store {
+    padding: var(--px-9-1024) var(--px-15-1024);
+    border: var(--px-1-1024) solid #CDAA7D;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product-right .first-row .wrapp__paragraph .wrapp__button .go__store a {
+    font-size: var(--px-22-1024);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product-right .first-row .background-line {
+    display: none;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product-right .second-row {
+    order: 1;
+    width: 100%;
+    height: 100%;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product-right .second-row .photo {
+    width: var(--px-400-1024);
+    height: var(--px-400-1024);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair {
+    border-top: var(--px-2-1024) solid #CDAA7D;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    margin: var(--px-30-1024) 0px;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product .first-row {
+    width: 100%;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product .first-row .photo {
+    width: var(--px-400-1024);
+    height: var(--px-400-1024);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product .second-row {
+    width: 70%;
+    height: 100%;
+    margin: var(--px-40-1024) 0px;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product .second-row .wrapp__paragraph {
+    margin: 20px 0px 0px 0px;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product .second-row .wrapp__paragraph h2 {
+    font-family: "Garamond", serif;
+    font-size: var(--px-28-1024);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product .second-row .wrapp__paragraph p {
+    font-size: var(--px-22-1024);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product .second-row .wrapp__paragraph .wrapp__button .go__store {
+    padding: var(--px-9-1024) var(--px-15-1024);
+    border: var(--px-1-1024) solid #CDAA7D;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product .second-row .wrapp__paragraph .wrapp__button .go__store a {
+    font-size: var(--px-22-1024);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product .second-row .background-line {
+    display: none;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    margin: var(--px-30-1024) 0px;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .first-row {
+    order: 2;
+    width: 70%;
+    height: 100%;
+    margin: var(--px-40-1024) 0px;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .first-row .wrapp__paragraph {
+    gap: var(--px-20-1024);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .first-row .wrapp__paragraph h2 {
+    text-align: start;
+    font-size: var(--px-24-1024);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .first-row .wrapp__paragraph p {
+    text-align: start;
+    font-size: var(--px-18-1024);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .first-row .wrapp__paragraph .wrapp__button {
+    justify-content: end;
+    margin: var(--px-10-1024) 0px 0px 0px;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .first-row .wrapp__paragraph .wrapp__button .go__store {
+    padding: var(--px-9-1024) var(--px-15-1024);
+    border: var(--px-1-1024) solid #CDAA7D;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .first-row .wrapp__paragraph .wrapp__button .go__store a {
+    font-size: var(--px-22-1024);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .first-row .background-line {
+    display: none;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .second-row {
+    order: 1;
+    width: 100%;
+    height: 100%;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .second-row .photo {
+    width: var(--px-400-1024);
+    height: var(--px-400-1024);
+  }
+}
+@media screen and (max-width: 768px) {
+  .header__container .header-content {
+    width: 90%;
+    justify-content: space-between;
+    margin: var(--px-30-1024) 0px 0px 0px;
+    border-bottom: none;
+    border-bottom: var(--px-1-768) solid rgba(205, 170, 125, 0.8);
+    margin: var(--px-15-768) 0px 0px 0px;
+  }
+  .header__container .header-content .instagram {
+    display: block;
+  }
+  .header__container .header-content .menu {
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  .header__container .header-content .menu .menu-list {
+    width: var(--px-300-1440);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: var(--px-35-1024);
+  }
+  .header__container .header-content .menu .menu-list .menu-link {
+    font-size: var(--px-18-1024);
+  }
+  .header__container .header-content .menu .menu-list .menu-link:hover {
+    font-size: var(--px-18-1024);
+  }
+  .header__container .header-content .menu .menu-list .menu-link:after {
+    content: "";
+    bottom: calc(var(--px-2-1024) * -1);
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: var(--px-1-1024);
+    background-color: #CDAA7D;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
+  .header__container .header-content .menu .menu-list .menu-link:hover::after {
+    width: 100%;
+    left: 0px;
+  }
+  .header__container .header-content .wrapp-logo {
+    margin: 0px var(--px-30-1024);
+  }
+  .header__container .header-content .wrapp-logo a .img-size {
+    width: var(--px-60-1024);
+    height: var(--px-60-1024);
+    border-radius: 60px;
+  }
+  .header__container .header-content .about-us__button {
+    margin: 0px 0px 0px var(--px-15-1024);
+  }
+  .header__container .header-content .about-us__button .about-us__size {
+    width: var(--px-50-1440);
+    height: var(--px-20-1440);
+    padding: 0px;
+  }
+  .header__container .about-us__close {
+    top: var(--px-45-1920);
+    right: var(--px-360-1920);
+  }
+  .header__container .about-us__close .close__size {
+    width: var(--px-32-1024);
+    height: var(--px-32-1024);
+  }
+  .header__container .about-us__inform {
+    flex-wrap: wrap;
+    width: calc(var(--px-400-1920) * 1.0875);
+    right: calc(var(--px-400-1920) * -1.0875);
+    top: calc(var(--px-30-1920) * -1);
+  }
+  .header__container .about-us__inform .burger__wrapp-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: var(--px-30-1024) 0px 0px 0px;
+  }
+  .header__container .about-us__inform .burger__wrapp-logo a .img-size {
+    width: var(--px-60-1024);
+    height: var(--px-60-1024);
+    border-radius: 60px;
+  }
+  .header__container .about-us__inform .burger__menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .header__container .about-us__inform .burger__menu .menu-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: var(--px-10-1024);
+  }
+  .header__container .about-us__inform .burger__menu .menu-list .menu-item {
+    width: 100%;
+    text-align: center;
+  }
+  .header__container .about-us__inform .burger__menu .menu-list .menu-link {
+    position: relative;
+    color: #FFF;
+    font-size: var(--px-18-1024);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%;
+    cursor: pointer;
+  }
+  .header__container .about-us__inform .burger__menu .menu-list .menu-link:hover {
+    color: #CDAA7D;
+    font-size: var(--px-18-1024);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%;
+  }
+  .header__container .about-us__inform .burger__menu .menu-list .menu-link:after {
+    content: "";
+    bottom: calc(var(--px-2-1920) * -1);
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: var(--px-1-1024);
+    background-color: #CDAA7D;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
+  .header__container .about-us__inform .burger__menu .menu-list .menu-link:hover::after {
+    width: 100%;
+    left: 0px;
+  }
+  .header__container .about-us__inform .wrapp__text {
+    width: var(--px-315-1920);
+    margin: var(--px-150-1920) 0px 0px 0px;
+  }
+  .header__container .about-us__inform .wrapp__text p {
+    font-size: var(--px-18-768);
+  }
+  .header__container .about-us__inform .wrapp__contacts {
+    width: var(--px-315-1920);
+    left: calc(50% - var(--px-157-1920));
+    margin: var(--px-80-1920) 0px 0px 0px;
+  }
+  .header__container .about-us__inform .wrapp__contacts h3 {
+    font-size: var(--px-24-1024);
+    margin: 0px 0px var(--px-25-768) 0px;
+  }
+  .header__container .about-us__inform .wrapp__contacts p {
+    font-size: var(--px-18-768);
+  }
+  .header__container .about-us__inform .wrapp__contacts p:nth-child(3) {
+    margin: var(--px-10-768) 0px;
+  }
+  .header__container .about-us__inform .wrapp__working-hours {
+    width: var(--px-315-1920);
+    left: calc(50% - var(--px-157-1920));
+  }
+  .header__container .about-us__inform .wrapp__working-hours h3 {
+    font-size: var(--px-24-768);
+    margin: 0px 0px var(--px-15-768) 0px;
+  }
+  .header__container .about-us__inform .wrapp__working-hours p {
+    font-size: var(--px-18-768);
+  }
+  .header__container .about-us__inform .wrapp__working-hours p:nth-child(3) {
+    margin: var(--px-10-768) 0px;
+  }
+  .about-us__container .about-us__content {
+    width: 80%;
+  }
+  .about-us__container .about-us__content .wpapp__svg {
+    margin: var(--px-120-768) 0px 0px 0px;
+  }
+  .about-us__container .about-us__content .wpapp__svg svg {
+    width: var(--px-80-768);
+    height: var(--px-64-768);
+  }
+  .about-us__container .about-us__content .wrapp__inform {
+    width: calc(var(--px-400-768) * 2.14);
+    margin: var(--px-60-768) 0px var(--px-95-768) 0px;
+  }
+  .about-us__container .about-us__content .wrapp__inform p {
+    font-size: var(--px-20-768);
+  }
+  .about-us__container .about-us__content .wrapp__inform p:nth-child(1) {
+    margin: 0px 0px var(--px-25-768) 0px;
+  }
+  .our-story__container .our-story__content {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .our-story__container .our-story__content .first-row {
+    order: 1;
+    width: 100%;
+  }
+  .our-story__container .our-story__content .first-row .wrapp-img {
+    width: var(--px-400-768);
+    height: var(--px-400-768);
+    margin: var(--px-70-768) 0px var(--px-10-768) 0px;
+  }
+  .our-story__container .our-story__content .second-row {
+    order: 2;
+    justify-content: center;
+    width: 70%;
+    margin: var(--px-20-768) 0px var(--px-50-768) 0px;
+  }
+  .our-story__container .our-story__content .second-row .wrapp-paragraph {
+    display: flex;
+    justify-content: center;
+  }
+  .our-story__container .our-story__content .second-row .wrapp-paragraph .wrapp-title {
+    width: 100%;
+    margin: 0px 0px var(--px-10-768) 0px;
+  }
+  .our-story__container .our-story__content .second-row .wrapp-paragraph .wrapp-title h2 {
+    text-align: center;
+    font-size: var(--px-40-768);
+  }
+  .our-story__container .our-story__content .second-row .wrapp-paragraph .wrapp-text p {
+    text-align: center;
+    font-size: var(--px-18-1440);
+  }
+  .our-story__container .our-story__content .second-row .wrapp-paragraph .learn-more {
+    border: var(--px-1-1440) solid #000;
+    margin: var(--px-20-1440) 0px var(--px-10-768) 0px;
+    padding: var(--px-7-1440) var(--px-15-1440);
+  }
+  .our-story__container .our-story__content .second-row .wrapp-paragraph .learn-more a {
+    font-size: var(--px-20-1440);
+  }
+  .popular-goods__container .popular-goods__content {
+    width: calc(var(--px-400-768) * 3);
+    border-top: var(--px-2-768) solid #CDAA7D;
+  }
+  .popular-goods__container .popular-goods__content .wrapp-title {
+    margin: var(--px-100-768);
+  }
+  .popular-goods__container .popular-goods__content .wrapp-title h3 {
+    font-size: var(--px-48-768);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    margin: var(--px-30-768) 0px;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product .first-row {
+    width: 100%;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product .first-row .photo {
+    width: var(--px-400-768);
+    height: var(--px-400-768);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product .second-row {
+    width: 80%;
+    height: 100%;
+    margin: var(--px-40-768) 0px;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product .second-row .wrapp__paragraph {
+    margin: var(--px-20-768) 0px 0px 0px;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product .second-row .wrapp__paragraph h2 {
+    font-family: "Garamond", serif;
+    font-size: var(--px-28-768);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product .second-row .wrapp__paragraph p {
+    font-size: var(--px-22-768);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product .second-row .wrapp__paragraph .wrapp__button {
+    justify-content: end;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product .second-row .wrapp__paragraph .wrapp__button .go__store {
+    padding: var(--px-9-768) var(--px-15-768);
+    border: var(--px-1-768) solid #CDAA7D;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product .second-row .wrapp__paragraph .wrapp__button .go__store a {
+    font-size: var(--px-22-768);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product .second-row .background-line {
+    display: none;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product-right {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    margin: var(--px-30-768) 0px;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product-right .first-row {
+    order: 2;
+    width: 80%;
+    height: 100%;
+    margin: var(--px-40-768) 0px;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product-right .first-row .wrapp__paragraph {
+    gap: var(--px-20-768);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product-right .first-row .wrapp__paragraph h2 {
+    text-align: start;
+    font-size: var(--px-24-768);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product-right .first-row .wrapp__paragraph p {
+    text-align: start;
+    font-size: var(--px-18-768);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product-right .first-row .wrapp__paragraph .wrapp__button {
+    justify-content: end;
+    margin: var(--px-10-768) 0px 0px 0px;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product-right .first-row .wrapp__paragraph .wrapp__button .go__store {
+    padding: var(--px-9-768) var(--px-15-768);
+    border: var(--px-1-768) solid #CDAA7D;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product-right .first-row .wrapp__paragraph .wrapp__button .go__store a {
+    font-size: var(--px-22-768);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product-right .first-row .background-line {
+    display: none;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product-right .second-row {
+    order: 1;
+    width: 100%;
+    height: 100%;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__product-right .second-row .photo {
+    width: var(--px-400-768);
+    height: var(--px-400-768);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair {
+    border-top: var(--px-2-768) solid #CDAA7D;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    margin: var(--px-30-768) 0px;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product .first-row {
+    width: 100%;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product .first-row .photo {
+    width: var(--px-400-768);
+    height: var(--px-400-768);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product .second-row {
+    width: 80%;
+    height: 100%;
+    margin: var(--px-40-768) 0px;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product .second-row .wrapp__paragraph {
+    margin: var(--px-20-768) 0px 0px 0px;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product .second-row .wrapp__paragraph h2 {
+    font-family: "Garamond", serif;
+    font-size: var(--px-28-768);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product .second-row .wrapp__paragraph p {
+    font-size: var(--px-22-768);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product .second-row .wrapp__paragraph .wrapp__button {
+    justify-content: end;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product .second-row .wrapp__paragraph .wrapp__button .go__store {
+    padding: var(--px-9-768) var(--px-15-768);
+    border: var(--px-1-768) solid #CDAA7D;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product .second-row .wrapp__paragraph .wrapp__button .go__store a {
+    font-size: var(--px-22-768);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product .second-row .background-line {
+    display: none;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    margin: var(--px-30-768) 0px;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .first-row {
+    order: 2;
+    width: 80%;
+    height: 100%;
+    margin: var(--px-40-768) 0px;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .first-row .wrapp__paragraph {
+    gap: var(--px-20-768);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .first-row .wrapp__paragraph h2 {
+    text-align: start;
+    font-size: var(--px-24-768);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .first-row .wrapp__paragraph p {
+    text-align: start;
+    font-size: var(--px-18-768);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .first-row .wrapp__paragraph .wrapp__button {
+    justify-content: end;
+    margin: var(--px-10-768) 0px 0px 0px;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .first-row .wrapp__paragraph .wrapp__button .go__store {
+    padding: var(--px-9-768) var(--px-15-768);
+    border: var(--px-1-768) solid #CDAA7D;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .first-row .wrapp__paragraph .wrapp__button .go__store a {
+    font-size: var(--px-22-768);
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .first-row .background-line {
+    display: none;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .second-row {
+    order: 1;
+    width: 100%;
+    height: 100%;
+  }
+  .popular-goods__container .popular-goods__content .wrapp__beauty-hair .wrapp__product-right .second-row .photo {
+    width: var(--px-400-768);
+    height: var(--px-400-768);
   }
 }

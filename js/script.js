@@ -1,4 +1,4 @@
-const floatOut = document.querySelector('.about-us__button').onclick = function () {
+const floatOut = document.querySelector('.about-us__button').onclick= function () {
      const aboutUsInf = document.querySelector('.about-us__inform');
      const aboutUsClose = document.querySelector('.about-us__close');
      const aboutUsOpen = document.querySelector('.about-us__button');

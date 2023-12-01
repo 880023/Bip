@@ -37,12 +37,3 @@ const hiding = document.getElementById('hiding').onclick = function () {
      
 };
 
-// const wrapper = document.querySelector('.wrapp-page');
-// document.addEventListener('click', (e) => {
-//      if (!wrapper.contains(e.target)) {
-//           floatOut;
-//      } else if (e != wrapper) {
-//           hiding
-//      }
-// })
-

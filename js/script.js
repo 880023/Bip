@@ -1,7 +1,9 @@
+const aboutUsInf = document.querySelector('.about-us__inform');
+const aboutUsClose = document.querySelector('.about-us__close');
+const aboutUsOpen = document.querySelector('.about-us__button');
+
 const floatOut = document.querySelector('.about-us__button').onclick= function () {
-     const aboutUsInf = document.querySelector('.about-us__inform');
-     const aboutUsClose = document.querySelector('.about-us__close');
-     const aboutUsOpen = document.querySelector('.about-us__button');
+     
      aboutUsInf.style.position = ('absolute');
      aboutUsInf.style.right = ('0px');
 
@@ -21,9 +23,6 @@ const floatOut = document.querySelector('.about-us__button').onclick= function (
 };
 
 const hiding = document.getElementById('hiding').onclick = function () {
-     const aboutUsInf = document.querySelector('.about-us__inform');
-     const aboutUsClose = document.querySelector('.about-us__close');
-     const aboutUsOpen = document.querySelector('.about-us__button');
      aboutUsInf.style.position = ('absolute');
      aboutUsInf.style.right = ('calc(var(--px-400-1920)* -1.0875)');
 

@@ -577,6 +577,24 @@ a {
                }    
 
           }
+
+          .change-lang {
+               width: 50px;
+               height: 30px;
+               border-radius: 10px;
+               background-color: #000;
+               color: #FFF;
+               border: 1px solid #FFF;
+               outline: none;
+               position: absolute;
+               bottom: var(--px-50-1920);
+               right: var(--px-50-1920);
+          }
+          .change-lang:hover {
+               background-color: #000;
+               color: #CDAA7D;
+               border: 1px solid #CDAA7D;
+          }
      }
 }
 

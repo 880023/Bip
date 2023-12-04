@@ -1,5 +1,7 @@
 'use strict'
 
+
+
 const aboutUsInf = document.querySelector('.about-us__inform');
 const aboutUsClose = document.querySelector('.about-us__close');
 const aboutUsOpen = document.querySelector('.about-us__button');
@@ -20,7 +22,7 @@ function floatOut() {
      aboutUsOpen.style.opacity = '0';
      aboutUsOpen.style.zIndex = '-1';
      
-     console.log('open');
+     // console.log('open');
      
 };
 
@@ -34,7 +36,7 @@ function hiding() {
      
      aboutUsOpen.style.zIndex = '5';
      aboutUsOpen.style.opacity = '1';
-     console.log('close');
+     // console.log('close');
      
 };
 
@@ -47,3 +49,35 @@ function hiding() {
 //      }
 // })
 
+const select = document.querySelector('select');
+const allLeng = ['en', 'ru', 'ua'];
+
+select.addEventListener('change', changeURLLanguage);
+
+//Перенаправить на url с названием языка
+function changeURLLanguage() {
+     let lang = select.value;
+     location.href = window.location.pathname + '#' + lang;
+     location.reload();
+}
+
+function changeLanguage() {
+     let hash = window.location.hash;
+     hash = hash.substring(1);
+     if (!allLeng.includes(hash)) {
+          location.href = window.location.pathname + '#en';
+          location.reload();
+     }
+     select.value = hash;
+     document.querySelector('title').innerHTML = langArr['unit'][hash];
+
+     for (let key in langArr) {
+          let elem = document.querySelector('.lng-' + key);
+          if (elem) {
+               elem.innerHTML = langArr[key][hash];
+          }
+          
+     }
+}
+
+changeLanguage()

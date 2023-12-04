@@ -11,7 +11,7 @@ function floatOut() {
 
      aboutUsClose.style.position = ('absolute');
      aboutUsClose.style.top = ('var(--px-40-1920)');
-     aboutUsClose.style.right = ('var(--px-360-1920)');
+     aboutUsClose.style.right = ('var(--px-355-1920)');
      aboutUsClose.style.opacity = '1';
      aboutUsClose.style.zIndex = '6';
      aboutUsClose.style.transitionDelay= '0.35s';

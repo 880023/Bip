@@ -6,7 +6,6 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" href="css/style.css">
      <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet">
-     <script src="js/script.js"></script>
      <title>Beauty Is Power</title>
 </head>
 <body>
@@ -57,7 +56,7 @@
                               </li>
                          </ul>
                     </nav>
-                    <button class="about-us__button">
+                    <button class="about-us__button" onclick ="floatOut()">
                          <svg class="about-us__size"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 21" fill="none">
                               <line class="first-line" x1="10" y1="0.5" x2="50" y2="0.5" stroke="#FFF" />
                               <line class="second-line" x1="10" y1="20.5" x2="50" y2="20.5" stroke="#FFF" />
@@ -67,8 +66,8 @@
                     
                </div>
                <button class="about-us__close">
-                    <svg class="close__size" id="hiding" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-                         <path id="hiding" d="M30 30L2 2M2 30L30 2L2 30Z" stroke="white" stroke-width="2" stroke-linecap="round"
+                    <svg class="close__size" onclick="hiding()"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+                         <path  id="hiding" d="M30 30L2 2M2 30L30 2L2 30Z" stroke="white" stroke-width="2" stroke-linecap="round"
                               stroke-linejoin="round" />
                     </svg>
                </button>
@@ -512,5 +511,6 @@
                </div>
           </footer>
      </div>
+     <script src="js/script.js"></script>
 </body>
 </html>

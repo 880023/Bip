@@ -1,9 +1,11 @@
+'use strict'
+
 const aboutUsInf = document.querySelector('.about-us__inform');
 const aboutUsClose = document.querySelector('.about-us__close');
 const aboutUsOpen = document.querySelector('.about-us__button');
 
-const floatOut = document.querySelector('.about-us__button').onclick = function floatOut() {
-     
+function floatOut() {
+    
      aboutUsInf.style.position = ('absolute');
      aboutUsInf.style.right = ('0px');
 
@@ -22,7 +24,7 @@ const floatOut = document.querySelector('.about-us__button').onclick = function 
      
 };
 
-const hiding = document.getElementById('hiding').onclick = function hiding() {
+function hiding() {
      aboutUsInf.style.position = ('absolute');
      aboutUsInf.style.right = ('calc(var(--px-400-1920)* -1.0875)');
 
@@ -35,4 +37,13 @@ const hiding = document.getElementById('hiding').onclick = function hiding() {
      console.log('close');
      
 };
+
+// const wrapper = document.querySelector('.wrapp-page');
+// document.addEventListener('click', (e) => {
+//      if (!wrapper.contains(e.target)) {
+//           floatOut;
+//      } else if (e != wrapper) {
+//           hiding
+//      }
+// })
 

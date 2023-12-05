@@ -144,10 +144,10 @@ a {
 // serif;
 
 .wrapp-page {
-     // width: 100vw;
-     background-color: #111111;
+     background: #111111;
      overflow: hidden;
      position: relative;
+     // transform: rotate(180deg);
      
 }
 
@@ -609,6 +609,7 @@ a {
           justify-content: center;
           align-items: center;
           flex-wrap: wrap;
+          z-index: 3;
 
           .wpapp__svg {
                width: 100%;
@@ -653,6 +654,8 @@ a {
      justify-content: center;
      align-items: center;
      background: #CDAA7D;
+     position: relative;
+     z-index: 4;
 
      .our-story__content {
           width: calc(var(--px-400-1920)* 3);
@@ -749,11 +752,20 @@ a {
      }
 }
 
+
+
 .bestsellers__container {
      display: flex;
      justify-content: center;
      align-items: center;
      // border-top: var(--px-2-1920) solid #CDAA7D;
+     position: relative;
+     .video {
+               width: 1920px;
+               position: absolute;
+               top: 0px;
+               z-index: 1;
+     }
 
      .bestsellers__content {
           width: calc(var(--px-400-1920) * 3);
@@ -762,6 +774,7 @@ a {
           align-items: center;
           flex-wrap: wrap;
           margin: 0px 0px var(--px-200-1920) 0px;
+          z-index: 3;
 
 
           .wrapp__title {
@@ -799,8 +812,7 @@ a {
                     flex-wrap: wrap;
                     width: var(--px-350-1920);
                     height: calc(var(--px-400-1920)* 1.125);
-                    background-color: #FFF;
-                    background-color: #111111;
+                    background-color: transparent;
 
 
                     img {
@@ -827,6 +839,7 @@ a {
                               font-style: normal;
                               font-weight: 400;
                               line-height: 120%;
+                              text-shadow: 0px 0px 20px #000;
                          }
 
                          .product-price {
@@ -838,6 +851,7 @@ a {
                               font-style: normal;
                               font-weight: 400;
                               line-height: 120%;
+                              text-shadow: 0px 0px 10px #000;
                          }
                     }
                     
@@ -846,23 +860,38 @@ a {
      }
 }
 
+
+
 .popular-goods__container {
      display: flex;
      justify-content: center;
      align-items: center;
      background-color: #111111;
+     position: relative;
+     z-index: 3;
+
+     .video {
+               width: 6900px;
+               position: absolute;
+               top: 0px;
+               z-index: 1;
+          }
 
      .popular-goods__content {
           width: calc(var(--px-400-1920)* 3);
           justify-content: center;
           align-items: center;
-          border-top: var(--px-2-1920) solid #CDAA7D;
+          // border-top: var(--px-2-1920) solid #CDAA7D;
+          position: relative;
+          z-index: 3;
 
           .wrapp-title {
                display: flex;
                justify-content: center;
                align-items: center;
                margin: var(--px-100-1920);
+               position: relative;
+               z-index: 4;
 
                h3 {
                     color: #CDAA7D;
@@ -1339,7 +1368,7 @@ a {
           justify-content: center;
           align-items: center;
           flex-wrap: wrap;
-          border-top: var(--px-2-1920) solid #CDAA7D;
+          // border-top: var(--px-2-1920) solid #CDAA7D;
           padding: var(--px-100-1920) 0px 0px 0px;
           margin: 0px 0px var(--px-100-1920) 0px;
 

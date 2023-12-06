@@ -426,7 +426,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: start;
-  background-image: url(../img/bgc.png);
+  background-image: url(img/ink-35507.gif);
   background-size: 1920px 1080px;
   background-repeat: no-repeat;
   background-position: center;
@@ -624,6 +624,9 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url(/img/b40ca33d23580f121a02d167a32a0340.gif);
+  background-size: 50%;
+  background-position: center;
   position: relative;
 }
 .bestsellers__container .video {
@@ -1331,8 +1334,9 @@ a {
 
 @media screen and (max-width: 2561px) {
   .home-page__container {
-    background-image: url(../img/bgc.png);
+    background-image: url(../img/ink-35507.gif);
     background-size: 2560px 1440px;
+    background-position: center;
   }
   .home-page__container .home-page__content {
     width: calc(var(--px-400-2560) * 3.6);

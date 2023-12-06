@@ -59,13 +59,13 @@ function changeURLLanguage() {
      let lang = select.value;
      location.href = window.location.pathname + '#' + lang;
      location.reload();
-}
+};
 
 function changeLanguage() {
      let hash = window.location.hash;
      hash = hash.substring(1);
      if (!allLeng.includes(hash)) {
-          location.href = window.location.pathname + '#en';
+          location.href = window.location.pathname + '#ua';
           location.reload();
      }
      select.value = hash;
@@ -78,6 +78,6 @@ function changeLanguage() {
           }
           
      }
-}
+};
 
-changeLanguage()
+changeLanguage();
